@@ -1,7 +1,7 @@
 const ctx = new AudioContext();
 let audio;
 
-fetch("./audioclips/testnote.wav")
+fetch("./audioclips/minorsecond.wav")
 .then(data => data.arrayBuffer())
 
 .then(arrayBuffer => ctx.decodeAudioData(arrayBuffer))
@@ -17,4 +17,4 @@ function playback() {
     playSound.start(ctx.currentTime);
 }
 
-window.addEventListener("mousedown", playback);
+//window.addEventListener("mousedown", playback);

@@ -1,0 +1,55 @@
+#pageBody {
+    background-color: #ecbfff; 
+    z-index: 0;
+}
+
+#pageBody img {
+   position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.3;
+    z-index: 0;
+}
+@media only screen and (max-width: 600px) {
+#pageBody img {
+   position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+}
+.sideNavbar {
+  height: 100%; 
+  width: 200px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background: linear-gradient(90deg, #ecbfff, transparent); 
+  overflow-x: hidden; 
+  padding-top: 20px;
+}
+
+
+.sideNavbar h2, .sideNavbar p {
+  padding: 2px 8px 2px 16px;
+  text-decoration: underline;
+  font-size: 20px;
+  color: #000;
+  display: block;
+}
+
+
+
+.main {
+  margin-left: 200px; 
+  padding: 0px 10px;
+}
+
+
