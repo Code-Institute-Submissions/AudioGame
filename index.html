@@ -1,24 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css" />
-     <link rel="stylesheet" href="styles/style.css"/>
-    <title>Audio Game</title>
-</head>
-<body id="pageBody">
-    <img src="/styles/images/piano.jpg">
-    <div class="sideNavbar">
-        <h2>Settings</h2>
-  <p>Difficulty</p>
-  <p>Harmonic/Melodic</p>
-  <p>Volume</p>
-  <p>...</p>
-</div>
-    <h1 class="main">Test your aural skills</h1>
-  
-    
-</body>
-<script src="scripts/audio.js"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <title>Audio Game</title>
+    </head>
+    <body id="pageBody">
+        <img src="/styles/images/piano.jpg" />
+        <div class="sideNavbar">
+            <h2>Settings</h2>
+            <p>Difficulty</p>
+            <p>Harmonic/Melodic</p>
+            <p>Volume</p>
+            <p>...</p>
+        </div>
+        <h1 class="main">Test your aural skills</h1>
+
+        <div class="blockOfAnswers">
+            <div class="answersTopRow">
+                <button class="intervalOptions" answer="1">
+                    <h2>Minor 2nd</h2>
+                </button>
+                <button class="intervalOptions" answer="2">
+                    <h2>Major 2nd</h2>
+                </button>
+                <button class="intervalOptions" answer="3">
+                    <h2>Minor 3rd</h2>
+                </button>
+                <button class="intervalOptions" answer="4">
+                    <h2>Major 3rd</h2>
+                </button>
+            </div>
+            <div class="answersMiddleRow">
+                <button class="intervalOptions" answer="5">
+                    <h2>Perfect Fourth</h2>
+                </button>
+                <button class="intervalOptions" answer="6">
+                    <h2>
+                        Augmented Fourth<br />
+                        Diminished Fifth<br />
+                        Tritone
+                    </h2>
+                </button>
+                <button class="intervalOptions" answer="7">
+                    <h2>Perfect Fifth</h2>
+                </button>
+                <button class="intervalOptions" answer="8">
+                    <h2>Minor 6th</h2>
+                </button>
+            </div>
+            <div class="answersBottomRow">
+                <button class="intervalOptions" answer="9">
+                    <h2>Major 6th</h2>
+                </button>
+                <button class="intervalOptions" answer="10">
+                    <h2>Minor 7th</h2>
+                </button>
+                <button class="intervalOptions" answer="11">
+                    <h2>Major 7th</h2>
+                </button>
+                <button class="intervalOptions" answer="12">
+                    <h2>Octave</h2>
+                </button>
+            </div>
+        </div>
+    </body>
+    <script src="scripts/audio.js"></script>
 </html>
