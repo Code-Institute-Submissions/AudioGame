@@ -50,9 +50,16 @@
 	margin-left: 200px;
 	padding: 0px 10px;
 }
-.audioFileBox button {
+.audioFileBox {
+    padding-top: 10px;
+}
+.playAgain {
+    height: 100px;
+    width: 150px;
     padding: 10px;
-    margin: auto 0;
+    background-color: green;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0px 0px grey;
 }
 .blockOfAnswers {
 	padding-top: 20px;

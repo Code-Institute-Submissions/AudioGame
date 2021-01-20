@@ -16,11 +16,16 @@
             <p>Volume</p>
             <p>...</p>
         </div>
+        
         <div class ="main">
         <h1>Test your aural skills</h1>
-            <div class="audioFileBox">
-                <button type="button" id="playAgain"><p>Listen Again</p></button>
-                <button type="button" id="skip"><p>Skip</p></button>
+            <div class="audioFileBox row">
+                <div class="col-2 offset-4">
+                <button type="button" class="btn-success playAgain" id="playAgain" onclick="play(this.id)"><h3>Replay</h3></button>
+                </div>
+                <div class="col-2">
+                <button type="button" class="btn-success playAgain" id="skip"><h3>Skip</h3></button>
+                </div>
             </div>
 
         <div class="blockOfAnswers">
