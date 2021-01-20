@@ -1,55 +1,76 @@
 #pageBody {
-    background-color: #ecbfff; 
-    z-index: 0;
+	background-color: #ecbfff;
+	z-index: 0;
 }
 
 #pageBody img {
-   position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: auto;
-    opacity: 0.3;
-    z-index: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+	opacity: 0.3;
+	z-index: 0;
 }
+
 @media only screen and (max-width: 600px) {
-#pageBody img {
-   position: absolute;
-    left: 0;
-    top: 0;
-    width: auto;
-    height: 100%;
-    opacity: 0.3;
-    z-index: 0;
+	#pageBody img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: auto;
+		height: 100%;
+		opacity: 0.3;
+		z-index: 0;
+	}
 }
 
-}
 .sideNavbar {
-  height: 100%; 
-  width: 200px; 
-  position: fixed; 
-  z-index: 1; 
-  top: 0; 
-  left: 0;
-  background: linear-gradient(90deg, #ecbfff, transparent); 
-  overflow-x: hidden; 
-  padding-top: 20px;
+	height: 100%;
+	width: 200px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: linear-gradient(90deg, #ecbfff, transparent);
+	overflow-x: hidden;
+	padding-top: 20px;
 }
 
-
-.sideNavbar h2, .sideNavbar p {
-  padding: 2px 8px 2px 16px;
-  text-decoration: underline;
-  font-size: 20px;
-  color: #000;
-  display: block;
+.sideNavbar h2,
+.sideNavbar p {
+	padding: 2px 8px 2px 16px;
+	text-decoration: underline;
+	font-size: 20px;
+	color: #000;
+	display: block;
 }
-
-
 
 .main {
-  margin-left: 200px; 
-  padding: 0px 10px;
+	margin-left: 200px;
+	padding: 0px 10px;
+}
+.audioFileBox button {
+    padding: 10px;
+    margin: auto 0;
+}
+.blockOfAnswers {
+	padding-top: 20px;
 }
 
+.answersTopRow button,
+.answersMiddleRow button,
+.answersBottomRow button {
+	width: 180px;
+	height: 120px;
+	padding: 20px;
+	margin: 20px;
+	background-color: #0FA2B8;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0px 0px grey;
+}
 
+button:focus {
+    outline: none;
+}

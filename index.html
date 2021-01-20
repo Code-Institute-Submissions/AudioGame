@@ -16,55 +16,57 @@
             <p>Volume</p>
             <p>...</p>
         </div>
-        <h1 class="main">Test your aural skills</h1>
+        <div class ="main">
+        <h1>Test your aural skills</h1>
+            <div class="audioFileBox">
+                <button type="button" id="playAgain"><p>Listen Again</p></button>
+                <button type="button" id="skip"><p>Skip</p></button>
+            </div>
 
         <div class="blockOfAnswers">
-            <div class="answersTopRow">
-                <button class="intervalOptions" answer="1">
-                    <h2>Minor 2nd</h2>
+            <div class="row justify-content-center answersTopRow">
+                <button type="button" class="col-2 offset-2 intervalOptions" id="button1">
+                    <h3>Minor 2nd</h3>
                 </button>
-                <button class="intervalOptions" answer="2">
-                    <h2>Major 2nd</h2>
+                <button type="button" class="col-2 intervalOptions" id="button2">
+                    <h3>Major 2nd</h3>
                 </button>
-                <button class="intervalOptions" answer="3">
-                    <h2>Minor 3rd</h2>
+                <button type="button" class="col-2 intervalOptions" id="button3">
+                    <h3>Minor 3rd</h3>
                 </button>
-                <button class="intervalOptions" answer="4">
-                    <h2>Major 3rd</h2>
-                </button>
-            </div>
-            <div class="answersMiddleRow">
-                <button class="intervalOptions" answer="5">
-                    <h2>Perfect Fourth</h2>
-                </button>
-                <button class="intervalOptions" answer="6">
-                    <h2>
-                        Augmented Fourth<br />
-                        Diminished Fifth<br />
-                        Tritone
-                    </h2>
-                </button>
-                <button class="intervalOptions" answer="7">
-                    <h2>Perfect Fifth</h2>
-                </button>
-                <button class="intervalOptions" answer="8">
-                    <h2>Minor 6th</h2>
+                <button type="button" class="col-2 intervalOptions" id="button4">
+                    <h3>Major 3rd</h3>
                 </button>
             </div>
-            <div class="answersBottomRow">
-                <button class="intervalOptions" answer="9">
-                    <h2>Major 6th</h2>
+            <div class="row justify-content-center answersMiddleRow">
+                <button type="button" class="col-2 offset-2 intervalOptions" id="button5">
+                    <h3>Perf. 4th</h3>
                 </button>
-                <button class="intervalOptions" answer="10">
-                    <h2>Minor 7th</h2>
+                <button type="button" class="col-2 intervalOptions" id="button6">
+                    <h3>Tritone!</h3>
                 </button>
-                <button class="intervalOptions" answer="11">
-                    <h2>Major 7th</h2>
+                <button type="button" class="col-2 intervalOptions" id="button7">
+                    <h3>Perf. 5th</h3>
                 </button>
-                <button class="intervalOptions" answer="12">
-                    <h2>Octave</h2>
+                <button type="button" class="col-2 intervalOptions" id="button8">
+                    <h3>Minor 6th</h3>
                 </button>
             </div>
+            <div class="row justify-content-center answersBottomRow">
+                <button type="button" class="col-2 offset-2 intervalOptions" id="button9">
+                    <h3>Major 6th</h3>
+                </button>
+                <button type="button" class="col-2 intervalOptions" id="button10">
+                    <h3>Minor 7th</h3>
+                </button>
+                <button type="button" class="col-2 intervalOptions" id="button11">
+                    <h3>Major 7th</h3>
+                </button>
+                <button type="button" class="col-2 intervalOptions" id="button12">
+                    <h3>Octave</h3>
+                </button>
+            </div>
+        </div>
         </div>
     </body>
     <script src="scripts/audio.js"></script>
