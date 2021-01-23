@@ -4,76 +4,78 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css" />
-        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
+        <link rel="stylesheet" href="assets/styles/style.css" />
         <title>Audio Game</title>
     </head>
     <body id="pageBody">
         <img src="/styles/images/piano.jpg" />
-        <div class="sideNavbar">
-            <h2>Settings</h2>
+        <nav class="sideNavbar">
+            <h2><i class="fas fa-cog"></i></h2>
             <p>Difficulty</p>
             <p>Harmonic/Melodic</p>
             <p>Volume</p>
             <p>...</p>
-        </div>
-        
-        <div class ="main">
-        <h1>Test your aural skills</h1>
+        </nav>
+
+        <div class="main">
+            <header><h1 class="text-center">Aural Training Game</h1></header>
             <div class="audioFileBox row">
-                <div class="col-2 offset-4">
-                <button type="button" class="btn-success playAgain" id="playAgain" onclick="play(this.id)"><h3>Replay</h3></button>
+                <div class="col-2 offset-4 text-center">
+                    <button type="button" class="btn-success playAgain" id="playAgain" onclick="play(this.id)"><h3>Replay</h3></button>
                 </div>
-                <div class="col-2">
-                <button type="button" class="btn-success playAgain" id="skip"><h3>Skip</h3></button>
+                <div class="col-2 text-center">
+                    <button type="button" class="btn-success playAgain" id="skip"><h3>Skip</h3></button>
                 </div>
             </div>
 
-        <div class="blockOfAnswers">
-            <div class="row justify-content-center answersTopRow">
-                <button type="button" class="col-2 offset-2 intervalOptions" id="button1">
-                    <h3>Minor 2nd</h3>
-                </button>
-                <button type="button" class="col-2 intervalOptions" id="button2">
-                    <h3>Major 2nd</h3>
-                </button>
-                <button type="button" class="col-2 intervalOptions" id="button3">
-                    <h3>Minor 3rd</h3>
-                </button>
-                <button type="button" class="col-2 intervalOptions" id="button4">
-                    <h3>Major 3rd</h3>
-                </button>
+            <div class="blockOfAnswers">
+                <div class="row justify-content-center answersTopRow">
+                    <button type="button" class="col-2 offset-2 intervalOptions" id="button1">
+                        <h3>Minor 2nd</h3>
+                    </button>
+                    <button type="button" class="col-2 intervalOptions" id="button2">
+                        <h3>Major 2nd</h3>
+                    </button>
+                    <button type="button" class="col-2 intervalOptions" id="button3">
+                        <h3>Minor 3rd</h3>
+                    </button>
+                    <button type="button" class="col-2 intervalOptions" id="button4">
+                        <h3>Major 3rd</h3>
+                    </button>
+                </div>
+                <div class="row justify-content-center answersMiddleRow">
+                    <button type="button" class="col-2 offset-2 intervalOptions" id="button5">
+                        <h3>Perf. 4th</h3>
+                    </button>
+                    <button type="button" class="col-2 intervalOptions" id="button6">
+                        <h3>Tritone!</h3>
+                    </button>
+                    <button type="button" class="col-2 intervalOptions" id="button7">
+                        <h3>Perf. 5th</h3>
+                    </button>
+                    <button type="button" class="col-2 intervalOptions" id="button8">
+                        <h3>Minor 6th</h3>
+                    </button>
+                </div>
+                <div class="row justify-content-center answersBottomRow">
+                    <button type="button" class="col-2 offset-2 intervalOptions" id="button9">
+                        <h3>Major 6th</h3>
+                    </button>
+                    <button type="button" class="col-2 intervalOptions" id="button10">
+                        <h3>Minor 7th</h3>
+                    </button>
+                    <button type="button" class="col-2 intervalOptions" id="button11">
+                        <h3>Major 7th</h3>
+                    </button>
+                    <button type="button" class="col-2 intervalOptions" id="button12">
+                        <h3>Octave</h3>
+                    </button>
+                </div>
             </div>
-            <div class="row justify-content-center answersMiddleRow">
-                <button type="button" class="col-2 offset-2 intervalOptions" id="button5">
-                    <h3>Perf. 4th</h3>
-                </button>
-                <button type="button" class="col-2 intervalOptions" id="button6">
-                    <h3>Tritone!</h3>
-                </button>
-                <button type="button" class="col-2 intervalOptions" id="button7">
-                    <h3>Perf. 5th</h3>
-                </button>
-                <button type="button" class="col-2 intervalOptions" id="button8">
-                    <h3>Minor 6th</h3>
-                </button>
-            </div>
-            <div class="row justify-content-center answersBottomRow">
-                <button type="button" class="col-2 offset-2 intervalOptions" id="button9">
-                    <h3>Major 6th</h3>
-                </button>
-                <button type="button" class="col-2 intervalOptions" id="button10">
-                    <h3>Minor 7th</h3>
-                </button>
-                <button type="button" class="col-2 intervalOptions" id="button11">
-                    <h3>Major 7th</h3>
-                </button>
-                <button type="button" class="col-2 intervalOptions" id="button12">
-                    <h3>Octave</h3>
-                </button>
-            </div>
-        </div>
         </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="scripts/audio.js"></script>
+    <script src="assets/scripts/audio.js"></script>
 </html>

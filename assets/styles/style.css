@@ -1,5 +1,20 @@
+:root {
+    
+    --reddish: #f05454;
+    --blackish: #222831;
+    --navy: #30475e;
+    --offWhite: #e8e8e8;
+}
+
+
+
 #pageBody {
-	background-color: #ecbfff;
+    background-color: var(--reddish);
+    z-index: 0;
+}
+
+#pageBody {
+	background-color: var(--reddish);
 	z-index: 0;
 }
 
@@ -32,17 +47,17 @@
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background: linear-gradient(90deg, #ecbfff, transparent);
+	background: linear-gradient(90deg, var(--reddish), transparent);
 	overflow-x: hidden;
-	padding-top: 20px;
+	padding-top: 100px;
 }
 
 .sideNavbar h2,
 .sideNavbar p {
-	padding: 2px 8px 2px 16px;
+	padding: 2px 16px 2px 16px;
 	text-decoration: underline;
 	font-size: 20px;
-	color: #000;
+	color: var(--blackish);
 	display: block;
 }
 
@@ -57,9 +72,9 @@
     height: 100px;
     width: 150px;
     padding: 10px;
-    background-color: green;
+    background-color: var(--navy);
     border-radius: 20px;
-    box-shadow: 2px 2px 0px 0px grey;
+    box-shadow: 2px 2px 0px 0px var(--blackish);
 }
 .blockOfAnswers {
 	padding-top: 20px;
@@ -72,10 +87,10 @@
 	height: 120px;
 	padding: 20px;
 	margin: 20px;
-	background-color: #0FA2B8;
-    color: white;
+	background-color: var(--navy);
+    color: var(--offWhite);
     border-radius: 20px;
-    box-shadow: 2px 2px 0px 0px grey;
+    box-shadow: 2px 2px 0px 0px var(--blackish);
 }
 
 button:focus {
