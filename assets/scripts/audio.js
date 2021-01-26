@@ -48,7 +48,7 @@ function playback() {
 }
 
 startGame.addEventListener("mousedown", playback);
-playAgain.addEventListener("mousedown", randomNoteIndex);
+
 
 var score = 0;
 var addScore = 10;
