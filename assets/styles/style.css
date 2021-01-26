@@ -22,8 +22,8 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: 100%;
-	height: auto;
+	width: auto;
+	height: 100%;
 	opacity: 0.3;
 	z-index: 0;
 }
@@ -67,6 +67,12 @@
 }
 .audioFileBox {
     padding-top: 10px;
+}
+.scoreArea {
+    padding-top: 20px;
+}
+.scoreArea h4, .scoreArea label {
+    color: var(--offWhite);
 }
 .playAgain {
     height: 100px;

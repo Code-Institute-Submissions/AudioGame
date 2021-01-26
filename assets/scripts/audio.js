@@ -47,10 +47,12 @@ function playback() {
     
 }
 
-playAgain.addEventListener("mousedown", playback);
+startGame.addEventListener("mousedown", playback);
+playAgain.addEventListener("mousedown", randomNoteIndex);
 
 var score = 0;
 var addScore = 10;
+
 function play(guessIndex) {
 
     if (guessIndex !== randomNoteIndex) {
@@ -63,10 +65,12 @@ function play(guessIndex) {
         console.log("woohoo");
         score += addScore;
         console.log(score);
-
+           
     };
+    var playerScore = document.getElementById("playerScore");
+            playerScore.innerHTML=score;
 };
-
+ 
 
 
 /* volume control script - FIGURE IT OUT!!!
