@@ -16,11 +16,12 @@
             <p>Difficulty</p>
             <p>Harmonic/Melodic</p>
             <p>Volume</p>
+            <input id="volume" type="range" min="0" max="1" step="0.1" value="0.5"/>
             <p>...</p>
         </nav>
 
         <div class="main">
-            <header><h1 class="text-center">Aural Training Game</h1></header>
+            <header><h1 class="text-center">Aural Training Game - Music Intervals!</h1></header>
             <div class="audioFileBox row">
                 <div class="col-2 offset-4 text-center">
                     <button type="button" class="btn-success playAgain" id="playAgain"><h3>Replay</h3></button>
@@ -32,44 +33,44 @@
 
             <div class="blockOfAnswers">
                 <div class="row justify-content-center answersTopRow">
-                    <button type="button" class="col-2 offset-2 intervalOptions" id="button1">
+                    <button type="button" class="col-2 offset-2 intervalOptions" id="button1" onclick="play(0)">
                         <h3>Minor 2nd</h3>
                     </button>
-                    <button type="button" class="col-2 intervalOptions" id="button2">
+                    <button type="button" class="col-2 intervalOptions" id="button2" onclick="play(1)">
                         <h3>Major 2nd</h3>
                     </button>
-                    <button type="button" class="col-2 intervalOptions" id="button3">
+                    <button type="button" class="col-2 intervalOptions" id="button3" onclick="play(2)">
                         <h3>Minor 3rd</h3>
                     </button>
-                    <button type="button" class="col-2 intervalOptions" id="button4">
+                    <button type="button" class="col-2 intervalOptions" id="button4" onclick="play(3)">
                         <h3>Major 3rd</h3>
                     </button>
                 </div>
                 <div class="row justify-content-center answersMiddleRow">
-                    <button type="button" class="col-2 offset-2 intervalOptions" id="button5">
+                    <button type="button" class="col-2 offset-2 intervalOptions" id="button5" onclick="play(4)">
                         <h3>Perf. 4th</h3>
                     </button>
-                    <button type="button" class="col-2 intervalOptions" id="button6">
+                    <button type="button" class="col-2 intervalOptions" id="button6" onclick="play(5)">
                         <h3>Tritone!</h3>
                     </button>
-                    <button type="button" class="col-2 intervalOptions" id="button7">
+                    <button type="button" class="col-2 intervalOptions" id="button7" onclick="play(6)">
                         <h3>Perf. 5th</h3>
                     </button>
-                    <button type="button" class="col-2 intervalOptions" id="button8">
+                    <button type="button" class="col-2 intervalOptions" id="button8" onclick="play(7)">
                         <h3>Minor 6th</h3>
                     </button>
                 </div>
                 <div class="row justify-content-center answersBottomRow">
-                    <button type="button" class="col-2 offset-2 intervalOptions" id="button9">
+                    <button type="button" class="col-2 offset-2 intervalOptions" id="button9" onclick="play(8)">
                         <h3>Major 6th</h3>
                     </button>
-                    <button type="button" class="col-2 intervalOptions" id="button10">
+                    <button type="button" class="col-2 intervalOptions" id="button10" onclick="play(9)">
                         <h3>Minor 7th</h3>
                     </button>
-                    <button type="button" class="col-2 intervalOptions" id="button11">
+                    <button type="button" class="col-2 intervalOptions" id="button11" onclick="play(10)">
                         <h3>Major 7th</h3>
                     </button>
-                    <button type="button" class="col-2 intervalOptions" id="button12">
+                    <button type="button" class="col-2 intervalOptions" id="button12" onclick="play(11)">
                         <h3>Octave</h3>
                     </button>
                 </div>
@@ -77,5 +78,5 @@
         </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="assets/scripts/audio.js"></script>
+    <script src="/assets/scripts/audio.js"></script>
 </html>
