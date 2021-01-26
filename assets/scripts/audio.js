@@ -49,19 +49,23 @@ function playback() {
 
 playAgain.addEventListener("mousedown", playback);
 
-
-
-
+var score = 0;
+var addScore = 10;
 function play(guessIndex) {
-    console.log(guessIndex);
 
-    if (guessIndex === randomNoteIndex) {
-        console.log("woohoo")
-    } else {
+    if (guessIndex !== randomNoteIndex) {
+        addScore--;
+
         console.log("oh no!")
+        console.log(score);
+    }
+    else {
+        console.log("woohoo");
+        score += addScore;
+        console.log(score);
+
     };
 };
-
 
 
 

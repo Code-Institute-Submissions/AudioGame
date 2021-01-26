@@ -21,16 +21,25 @@
         </nav>
 
         <div class="main">
-            <header><h1 class="text-center">Aural Training Game - Music Intervals!</h1></header>
+            <header>
+                <h1 class="text-center">Aural Training Game - Music Intervals!</h1>
+            </header>
             <div class="audioFileBox row">
                 <div class="col-2 offset-4 text-center">
-                    <button type="button" class="btn-success playAgain" id="playAgain"><h3>Replay</h3></button>
+                    <button type="button" class="btn-success playAgain" id="playAgain">
+                        <h3>Replay</h3>
+                    </button>
                 </div>
                 <div class="col-2 text-center">
-                    <button type="button" class="btn-success playAgain" id="skip"><h3>Skip</h3></button>
+                    <button type="button" class="btn-success playAgain" id="skip">
+                        <h3>Skip</h3>
+                    </button>
+                </div>
+                <div class="scoreArea col-2 offset-1 text-center">
+                    <h4>Your score</h4>
+                        <label id="playerScore">0</label>
                 </div>
             </div>
-
             <div class="blockOfAnswers">
                 <div class="row justify-content-center answersTopRow">
                     <button type="button" class="col-2 offset-2 intervalOptions" id="button1" onclick="play(0)">
