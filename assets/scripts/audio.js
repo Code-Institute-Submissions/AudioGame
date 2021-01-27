@@ -1,6 +1,7 @@
 const ctx = new AudioContext();
 let audio;
 let randomNoteIndex;
+let lastRandomNote;
 let allNotesArray;
 const fetchAudioFile = async (fileName) => {
     if (!fileName) throw new Error("File Name is required");
@@ -44,20 +45,31 @@ function playback() {
     playSound.start(ctx.currentTime);
     randomNoteIndex = allNotesArray.indexOf(randomNote);
     console.log(randomNoteIndex);
+}
+function replay() {
+    
+    lastRandomNote = allNotesArray[randomNoteIndex];
+
+    const playSound = ctx.createBufferSource();
+    playSound.buffer = lastRandomNote;
+    playSound.connect(ctx.destination);
+    playSound.start(ctx.currentTime);
+    
     
 }
 
 startGame.addEventListener("mousedown", playback);
+playAgain.addEventListener("mousedown", replay);
 
 
 var score = 0;
+
 var addScore = 10;
 
 function play(guessIndex) {
-
+    
     if (guessIndex !== randomNoteIndex) {
-        addScore--;
-
+        score--;
         console.log("oh no!")
         console.log(score);
     }
@@ -69,8 +81,10 @@ function play(guessIndex) {
     };
     var playerScore = document.getElementById("playerScore");
             playerScore.innerHTML=score;
-};
- 
+    
+}; 
+
+//format start button, replay button, skip button and create 'next' option
 
 
 /* volume control script - FIGURE IT OUT!!!
