@@ -3,6 +3,7 @@ let audio;
 let randomNoteIndex;
 let lastRandomNote;
 let allNotesArray;
+
 const fetchAudioFile = async (fileName) => {
     if (!fileName) throw new Error("File Name is required");
 
@@ -71,13 +72,11 @@ function play(guessIndex) {
     if (guessIndex !== randomNoteIndex) {
         score--;
         console.log("oh no!")
-        console.log(score);
+        document.getElementById(`button${guessIndex}`).style.backgroundColor = "red";
     }
     else {
-        console.log("woohoo");
-        score += addScore;
-        console.log(score);
-           
+        score += addScore; 
+        document.getElementById(`button${guessIndex}`).style.backgroundColor = "green";
     };
     var playerScore = document.getElementById("playerScore");
             playerScore.innerHTML=score;
