@@ -11,15 +11,17 @@
     </head>
     <body id="pageBody">
         <img src="assets/styles/images/piano.jpg" />
-        <nav class="sideNavbar">
-            <h2><i class="fas fa-cog"></i></h2>
+        <nav class="sideNavbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <h2><i class="fas fa-cog"></i></h2>
+            </button>
             <p>Difficulty</p>
             <p>Harmonic/Melodic</p>
             <p>Volume</p>
             <input id="volume" type="range" min="0" max="1" step="0.1" value="0.5"/>
             <p>...</p>
         </nav>
-
+        
         <div class="main">
             <header>
                 <h1 class="text-center">Aural Training Game - Music Intervals!</h1>
@@ -27,65 +29,65 @@
             <div class="audioFileBox row">
                 <div class="col-2 offset-2 text-center">
                     <button type="button" class="btn-success playAgain" id="startGame">
-                        <h4>Start</h4>
+                        <i class="fas fa-play" alt="Start Game"></i>
                     </button>
                 </div>
                 <div class="col-2 text-center">
                     <button type="button" class="btn-success playAgain" id="playAgain">
-                        <h4>Replay</h4>
+                        <i class="fas fa-redo-alt" alt="Repeat"></i>
                     </button>
                 </div>
                 <div class="col-2 text-center">
                     <button type="button" class="btn-success playAgain" id="skip">
-                        <h4>Skip</h4>
+                        <i class="fas fa-forward" alt="Skip Interval"></i>
                     </button>
                 </div>
                 <div class="scoreArea col-2 offset-1 text-center">
-                    <h4>Your score</h4>
+                    <h5>Your score</h5>
                         <label id="playerScore">0</label>
                 </div>
             </div>
             <div class="blockOfAnswers">
                 <div class="row justify-content-center answersTopRow">
                     <button type="button" class="col-2 offset-2 intervalOptions" id="button1" onclick="play(0)">
-                        <h3>Minor 2nd</h3>
+                        <h5>Minor 2nd</h5>
                     </button>
                     <button type="button" class="col-2 intervalOptions" id="button2" onclick="play(1)">
-                        <h3>Major 2nd</h3>
+                        <h5>Major 2nd</h5>
                     </button>
                     <button type="button" class="col-2 intervalOptions" id="button3" onclick="play(2)">
-                        <h3>Minor 3rd</h3>
+                        <h5>Minor 3rd</h5>
                     </button>
                     <button type="button" class="col-2 intervalOptions" id="button4" onclick="play(3)">
-                        <h3>Major 3rd</h3>
+                        <h5>Major 3rd</h5>
                     </button>
                 </div>
                 <div class="row justify-content-center answersMiddleRow">
                     <button type="button" class="col-2 offset-2 intervalOptions" id="button5" onclick="play(4)">
-                        <h3>Perf. 4th</h3>
+                        <h5>Perf. 4th</h5>
                     </button>
                     <button type="button" class="col-2 intervalOptions" id="button6" onclick="play(5)">
-                        <h3>Tritone!</h3>
+                        <h5>Tritone!</h5>
                     </button>
                     <button type="button" class="col-2 intervalOptions" id="button7" onclick="play(6)">
-                        <h3>Perf. 5th</h3>
+                        <h5>Perf. 5th</h5>
                     </button>
                     <button type="button" class="col-2 intervalOptions" id="button8" onclick="play(7)">
-                        <h3>Minor 6th</h3>
+                        <h5>Minor 6th</h5>
                     </button>
                 </div>
                 <div class="row justify-content-center answersBottomRow">
                     <button type="button" class="col-2 offset-2 intervalOptions" id="button9" onclick="play(8)">
-                        <h3>Major 6th</h3>
+                        <h5>Major 6th</h5>
                     </button>
                     <button type="button" class="col-2 intervalOptions" id="button10" onclick="play(9)">
-                        <h3>Minor 7th</h3>
+                        <h5>Minor 7th</h5>
                     </button>
                     <button type="button" class="col-2 intervalOptions" id="button11" onclick="play(10)">
-                        <h3>Major 7th</h3>
+                        <h5>Major 7th</h5>
                     </button>
                     <button type="button" class="col-2 intervalOptions" id="button12" onclick="play(11)">
-                        <h3>Octave</h3>
+                        <h5>Octave</h5>
                     </button>
                 </div>
             </div>

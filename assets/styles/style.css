@@ -9,13 +9,8 @@
 
 
 #pageBody {
-    background-color: var(--reddish);
+    background-color: var(--offWhite);
     z-index: 0;
-}
-
-#pageBody {
-	background-color: var(--reddish);
-	z-index: 0;
 }
 
 #pageBody img {
@@ -27,7 +22,10 @@
 	opacity: 0.3;
 	z-index: 0;
 }
-
+h1 {
+    padding: 20px;
+    color: var(--navy);
+}
 @media only screen and (max-width: 600px) {
 	#pageBody img {
 		position: absolute;
@@ -47,7 +45,7 @@
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background: linear-gradient(90deg, var(--reddish), transparent);
+	background: linear-gradient(90deg, var(--navy), 90%, transparent);
 	overflow-x: hidden;
 	padding-top: 100px;
 }
@@ -57,7 +55,7 @@
 	padding: 2px 16px 2px 16px;
 	text-decoration: underline;
 	font-size: 20px;
-	color: var(--blackish);
+	color: var(--offWhite);
 	display: block;
 }
 
@@ -72,7 +70,7 @@
     padding-top: 20px;
 }
 .scoreArea h4, .scoreArea label {
-    color: var(--offWhite);
+    color: var(--navy);
 }
 .playAgain {
     height: 100px;
@@ -101,4 +99,11 @@
 
 button:focus {
     outline: none;
+}
+
+button {
+    max-width: 75%;
+}
+button i {
+    font-size: 30px;
 }
