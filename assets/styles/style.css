@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+/*font-family: 'Josefin Sans', sans-serif; */
 :root {
     
     --reddish: #f05454;
@@ -6,13 +8,95 @@
     --offWhite: #e8e8e8;
 }
 
-
-
 #pageBody {
     background-color: var(--offWhite);
     z-index: 0;
 }
+#pageBody img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: auto;
+		opacity: 0.3;
+		z-index: 0;
+	}
 
+.main {
+    padding: 10px 10px;
+}	
+h1 {
+    padding: 20px 20px 20px 20px;
+    color: var(--navy);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
+
+.navbar {
+	background-color: var(--navy);
+	padding-top: 10px;
+}
+.dropdown-menu {
+    background-color: var(--navy);
+}
+.navbar a {
+    font-family: 'Josefin Sans', sans-serif;
+	padding: 2px 16px 2px 16px;
+	text-decoration: underline;
+	font-size: 20px;
+	color: var(--offWhite);
+	display: block;
+}
+.audioFileBox {
+    padding-top: 10px;
+}
+
+.scoreArea h5, .scoreArea label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: var( --blackish);
+}
+.playAgain {
+    height: 50px;
+    width: 75px;
+    padding: 10px;
+    background-color: var(--navy);
+    border-radius: 20px;
+    box-shadow: 2px 2px 0px 0px var(--blackish);
+}
+.blockOfAnswers {
+	padding-top: 20px;
+}
+
+.answersTopRow button,
+.answersMiddleRow button,
+.answersBottomRow button {
+    font-family: 'Josefin Sans', sans-serif;
+	max-width: 150px;
+	height: 120px;
+	padding: 5px;
+	margin: 20px auto;
+	background-color: var(--navy);
+    color: var(--offWhite);
+    border-radius: 20px;
+    box-shadow: 2px 2px 0px 0px var(--blackish);
+}
+
+button:focus {
+    outline: none;
+}
+
+button {
+    max-width: 75%;
+}
+button i {
+    font-size: 20px;
+}
+
+
+/* Larger Screens Styling
+
+@media only screen and (min-width: 768px) {
 #pageBody img {
 	position: absolute;
 	left: 0;
@@ -22,22 +106,10 @@
 	opacity: 0.3;
 	z-index: 0;
 }
-h1 {
-    padding: 20px;
-    color: var(--navy);
+    .main {
+	margin-left: 200px;
+	padding: 0px 10px;
 }
-@media only screen and (max-width: 600px) {
-	#pageBody img {
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: auto;
-		height: 100%;
-		opacity: 0.3;
-		z-index: 0;
-	}
-}
-
 .sideNavbar {
 	height: 100%;
 	width: 200px;
@@ -49,19 +121,14 @@ h1 {
 	overflow-x: hidden;
 	padding-top: 100px;
 }
-
 .sideNavbar h2,
 .sideNavbar p {
+    font-family: 'Josefin Sans', sans-serif;
 	padding: 2px 16px 2px 16px;
 	text-decoration: underline;
 	font-size: 20px;
 	color: var(--offWhite);
 	display: block;
-}
-
-.main {
-	margin-left: 200px;
-	padding: 0px 10px;
 }
 .audioFileBox {
     padding-top: 10px;
@@ -69,8 +136,11 @@ h1 {
 .scoreArea {
     padding-top: 20px;
 }
-.scoreArea h4, .scoreArea label {
-    color: var(--navy);
+.scoreArea h5, .scoreArea label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: var( --blackish);
 }
 .playAgain {
     height: 100px;
@@ -87,6 +157,7 @@ h1 {
 .answersTopRow button,
 .answersMiddleRow button,
 .answersBottomRow button {
+    font-family: 'Josefin Sans', sans-serif;
 	width: 180px;
 	height: 120px;
 	padding: 20px;
@@ -106,4 +177,5 @@ button {
 }
 button i {
     font-size: 30px;
+}
 }

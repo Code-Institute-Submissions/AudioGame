@@ -7,101 +7,116 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
         <link rel="stylesheet" href="assets/styles/style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
         <title>Audio Game</title>
     </head>
     <body id="pageBody">
         <img src="assets/styles/images/piano.jpg" />
         <!-- Navbar side for big screens, top for small-->
-        <nav class="sideNavbar navbar-expand-lg">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <h2><i class="fas fa-cog"></i></h2>
-            </button>
-            <p>Difficulty</p>
-            <p>Harmonic/Melodic</p>
-            <p>Volume</p>
-            <input id="volume" type="range" min="0" max="1" step="0.1" value="0.5"/>
-            <p>...</p>
-        </nav>
-        
-        <div class="main">
+
+        <nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#">Interval Game</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fa fa-cog"></i></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Interval Type
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" id="melodic">Melodic</a>
+          <a class="dropdown-item" id="harmonic">Harmonic</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Help</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+        <div class="main container-fluid">
             <header>
                 <h1 class="text-center">Aural Training Game - Music Intervals!</h1>
             </header>
             <!-- Play repeat next buttons -->
             <section>
-            <div class="audioFileBox row">
-                <div class="col-2 offset-2 text-center">
-                    <button type="button" class="btn-success playAgain" id="startGame">
-                        <i class="fas fa-play" alt="Start Game"></i>
-                    </button>
-                </div>
-                <div class="col-2 text-center">
-                    <button type="button" class="btn-success playAgain" id="playAgain">
-                        <i class="fas fa-redo-alt" alt="Repeat"></i>
-                    </button>
-                </div>
-                <div class="col-2 text-center">
-                    <button type="button" class="btn-success playAgain" id="skip">
-                        <i class="fas fa-forward" alt="Skip Interval"></i>
-                    </button>
-                </div>
-                <div class="scoreArea col-2 offset-1 text-center">
-                    <h5>Your score</h5>
+                <div class="audioFileBox row">
+                    <div class="col-3 offset-md-2 col-md-2 text-center">
+                        <button type="button" class="btn-success playAgain" id="startGame">
+                            <i class="fas fa-play" alt="Start Game"></i>
+                        </button>
+                    </div>
+                    <div class="col-3 col-md-2 text-center">
+                        <button type="button" class="btn-success playAgain" id="playAgain">
+                            <i class="fas fa-redo-alt" alt="Repeat"></i>
+                        </button>
+                    </div>
+                    <div class="col-3 col-md-2 text-center">
+                        <button type="button" class="btn-success playAgain" id="skip">
+                            <i class="fas fa-forward" alt="Skip Interval"></i>
+                        </button>
+                    </div>
+                    <div class="scoreArea col-3 col-md-2 text-center">
+                        <h5>Your score</h5>
                         <label id="playerScore">0</label>
+                    </div>
                 </div>
-            </div>
             </section>
             <!--Answer Options Buttons-->
             <section>
-            <div class="blockOfAnswers">
-                <div class="row justify-content-center answersTopRow">
-                    <button type="button" class="col-2 offset-2 intervalOptions" id="button0" onclick="play(0)">
-                        <h5>Minor 2nd</h5>
-                    </button>
-                    <button type="button" class="col-2 intervalOptions" id="button1" onclick="play(1)">
-                        <h5>Major 2nd</h5>
-                    </button>
-                    <button type="button" class="col-2 intervalOptions" id="button2" onclick="play(2)">
-                        <h5>Minor 3rd</h5>
-                    </button>
-                    <button type="button" class="col-2 intervalOptions" id="button3" onclick="play(3)">
-                        <h5>Major 3rd</h5>
-                    </button>
+                <div class="blockOfAnswers">
+                    <div class="row justify-content-center answersTopRow">
+                        <button type="button" class="col-3 offset-md-2 col-md-2 intervalOptions" id="button0" onclick="play(0)">
+                            <h5>Minor 2nd</h5>
+                        </button>
+                        <button type="button" class="col-3 col-md-2 intervalOptions" id="button1" onclick="play(1)">
+                            <h5>Major 2nd</h5>
+                        </button>
+                        <button type="button" class="col-3 col-md-2 intervalOptions" id="button2" onclick="play(2)">
+                            <h5>Minor 3rd</h5>
+                        </button>
+                        <button type="button" class="col-3 col-md-2 intervalOptions" id="button3" onclick="play(3)">
+                            <h5>Major 3rd</h5>
+                        </button>
+                    </div>
+                    <div class="row justify-content-center answersMiddleRow">
+                        <button type="button" class="col-3 col-md-2 offset-md-2 intervalOptions" id="button4" onclick="play(4)">
+                            <h5>Perf. 4th</h5>
+                        </button>
+                        <button type="button" class="col-3 col-md-2 intervalOptions" id="button5" onclick="play(5)">
+                            <h5>Tritone!</h5>
+                        </button>
+                        <button type="button" class="col-3 col-md-2 intervalOptions" id="button6" onclick="play(6)">
+                            <h5>Perf. 5th</h5>
+                        </button>
+                        <button type="button" class="col-3 col-md-2 intervalOptions" id="button7" onclick="play(7)">
+                            <h5>Minor 6th</h5>
+                        </button>
+                    </div>
+                    <div class="row justify-content-center answersBottomRow">
+                        <button type="button" class="col-3 col-md-2 offset-md-2 intervalOptions" id="button8" onclick="play(8)">
+                            <h5>Major 6th</h5>
+                        </button>
+                        <button type="button" class="col-3 col-md-2 intervalOptions" id="button9" onclick="play(9)">
+                            <h5>Minor 7th</h5>
+                        </button>
+                        <button type="button" class="col-3 col-md-2 intervalOptions" id="button10" onclick="play(10)">
+                            <h5>Major 7th</h5>
+                        </button>
+                        <button type="button" class="col-3 col-md-2 intervalOptions" id="button11" onclick="play(11)">
+                            <h5>Octave</h5>
+                        </button>
+                    </div>
                 </div>
-                <div class="row justify-content-center answersMiddleRow">
-                    <button type="button" class="col-2 offset-2 intervalOptions" id="button4" onclick="play(4)">
-                        <h5>Perf. 4th</h5>
-                    </button>
-                    <button type="button" class="col-2 intervalOptions" id="button5" onclick="play(5)">
-                        <h5>Tritone!</h5>
-                    </button>
-                    <button type="button" class="col-2 intervalOptions" id="button6" onclick="play(6)">
-                        <h5>Perf. 5th</h5>
-                    </button>
-                    <button type="button" class="col-2 intervalOptions" id="button7" onclick="play(7)">
-                        <h5>Minor 6th</h5>
-                    </button>
-                </div>
-                <div class="row justify-content-center answersBottomRow">
-                    <button type="button" class="col-2 offset-2 intervalOptions" id="button8" onclick="play(8)">
-                        <h5>Major 6th</h5>
-                    </button>
-                    <button type="button" class="col-2 intervalOptions" id="button9" onclick="play(9)">
-                        <h5>Minor 7th</h5>
-                    </button>
-                    <button type="button" class="col-2 intervalOptions" id="button10" onclick="play(10)">
-                        <h5>Major 7th</h5>
-                    </button>
-                    <button type="button" class="col-2 intervalOptions" id="button11" onclick="play(11)">
-                        <h5>Octave</h5>
-                    </button>
-                </div>
-            </div>
             </section>
         </div>
-        
     </body>
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="/assets/scripts/audio.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+   
+        <script src="/assets/scripts/audio.js"></script>
 </html>

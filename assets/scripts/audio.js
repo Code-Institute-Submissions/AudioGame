@@ -157,51 +157,6 @@ function play(guessIndex) {
 //format start button, replay button, skip button and create 'next' option
 
 
-/* volume control script - FIGURE IT OUT!!!
-
-var audio_context = null;
-    var gain_node = null;
-
-    window.AudioContext = window.AudioContext || window.webkitAudioContext;
-    audio_context = new AudioContext();
-
-    gain_node = audio_context.createGain(); // Declare gain node
-    gain_node.connect(audio_context.destination); // Connect gain node to speakers
 
 
-
-
-    function render_audio() {
-
-        var request = new XMLHttpRequest();
-
-        var audio_url = "your_music.mp3";
-
-        request.open('GET', audio_url, true); // loading local file for now
-        request.responseType = 'arraybuffer';
-
-        // Decode asynchronously
-        request.onload = function() {
-
-            audio_context.decodeAudioData(request.response, function(buffer) {
-
-                stored_buffer = buffer; // store buffer for replay later
-
-                var source = audio_context.createBufferSource(); // creates a sound source
-                source.buffer = buffer;                    // tell the source which sound to play
-                source.connect(gain_node);       // connect source to speakers
-                source.start(0);                           // play the source now
-            });
-        };
-        request.send();
-    }
-
-    // --- enable volume control for output speakers
-
-    document.getElementById('volume').addEventListener('change', function() {
-
-      var curr_volume = this.value;
-      gain_node.gain.value = curr_volume;
-
-      console.log("curr_volume ", curr_volume);
-    });*/
+       
