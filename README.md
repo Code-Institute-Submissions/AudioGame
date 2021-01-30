@@ -1,45 +1,104 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Notes
 
-Welcome Shinners888,
+Fixed Sidebar: https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
+Laoding audio files in Web Audio API tutorial https://www.youtube.com/watch?v=3NgVlAscdcA&list=PLMPgoZdlPumc_llMSynz5BqT8dTwr5sZ2
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+tested playback of audio files using Web Audio API
+created background and buttons for game
+Connected playback function to replay button.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Audio Training Game
 
-`python3 -m http.server`
+## Interactive Frontend Project - Code Institute
 
-A blue button should appear to click: *Make Public*,
+A simple game to test aural skills by guessing the intervals between two notes
 
-Another blue button should appear to click: *Open Browser*.
+Features include:
+- randomised sound files of two notes, with the option of hearing them again
+- 5 possible points for each interval. 1 point lost for each wrong answer
+- Can be played by anyone - people looking to increase aural skills or maintain their ear
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Goals.
 
-A blue button should appear to click: *Make Public*,
+This is a simple aural testing and training game as repeated use will build aural skills over time. Constant practise is key to building strong aural skills. A game can build confidence by providing positive feedback on achieving the correct answer. This in turn can encourage people to keep trying and get better.
 
-Another blue button should appear to click: *Open Browser*.
+The target customer is anyone looking to build aural skills. The layout is simple and easy to naviagte regardless of musical knowledge or age.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## UX
 
-## Updates Since The Instructional Video
+The site is aimed at everyone. It helps to be an English speaker as the website and interval options are in English. However, They are laid out smallest interval to largest. As this is an intuitive layout, it would be easy to figure out, especially for musically trained non-english speakers.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+# The Site - Features
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The site/game is a single page.
+There are:
+- a start button
+- a repeat button (to hear the last interval again)
+- a 'next' button
+- a score counter
+- 12 buttons representing each interval options
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Settings:
+- a volume button
+- a toggle to choose harmonic or melodic intervals
+- a hints sheet for how to play, and how to recognise different intervals
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+# FIX WIREFRAMES!!!!!!!!
+[Desktop](assets/wireframes/md-DesktopWireframe.png)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+[Mobile](assets/wireframes/mobileWireframe.png)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+## Execution
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+This project was created using:
 
---------
+- HTML
+- CSS 
+- Javascript 
+- Web Sound API 
+- JQuery
+- Bootstrap 
+  - Note: bootstrap classes are formatted with hyphens separating words, whereas my own classes are camelCase
+- Font Awesome 
+- Logic Pro 
+- [Unsplash](https://unsplash.com/)
 
-Happy coding!
+######################################INCLUDE FORMATTERS HERE
+
+## Gameplay
+On start, two notes will play and you have 5 chances to pick from a possible 12 answers. 
+
+
+
+
+## Deployment
+
+This project was developed in (((###############Gitpod))), committed to git and pushed to GitHub.
+
+To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
+
+Go to github and log into your account.
+Select (((######################)))project repository
+Above green Gitpod button, select settings, and scroll down to gitpod pages section
+In source: select master branch and root folder.
+Hit save. This may then require patient waiting for the site to be deployed!
+Scroll back down to the GitHub Pages section to retrieve the link to the deployed website. If it is not yet ready, make some tea and wait.
+Cloning the repository
+
+## Cloning in Gitpod
+
+log into your Github account
+go to ############################this repository
+click on the green gitpod button (Ensure you have a gitpod account and the gitpod browser extension. Recommended to do this in chrome)
+this will now open a new gitpod workspace using the code in github, for you to work on
+
+## Cloning in other IDEs
+
+go to ##############################this repository
+beside the green gitpod button, click the 'code' dropdown
+select the HTTPS option and copy the link to your clipboard
+go to your IDE and open the terminal
+type: 'git clone' followed by pasting the copied link, and press enter
+your clone should be created. for troubleshooting, see: ##############################Github docs
