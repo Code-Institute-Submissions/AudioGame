@@ -10,10 +10,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
         <title>Audio Game</title>
     </head>
-    <body id="pageBody">
-        <img src="assets/styles/images/piano.jpg" />
+    <body class="pageBody">
         <!-- Navbar side for big screens, top for small-->
-
+<header>
         <nav class="navbar navbar-expand-lg container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span><i class="fa fa-cog"></i></span>
@@ -38,10 +37,11 @@
                 </ul>
             </div>
         </nav>
-        <div class="main container-fluid">
-            <header>
+        </header>
+        <div class="main">
+            <div class="topOfPage container-fluid">
                 <h1 class="text-center">Aural Training Game - Music Intervals!</h1>
-            </header>
+            
             <!-- Play repeat next buttons -->
             <section>
                 <div class="audioFileBox row container-fluid">
@@ -60,12 +60,13 @@
                             <i class="fas fa-forward" alt="Skip Interval"></i>
                         </button>
                     </div>
-                    <div class="scoreArea col-3 col-md-2 text-center">
-                        <h5>Your score</h5>
-                        <label id="playerScore">0</label>
+                    <div class="scoreArea offset-1 col-2 offset-md-2 col-md-2 text-center">
+                        <h5>Score<br><label id="playerScore">0</label></h5>
+                        
                     </div>
                 </div>
             </section>
+           </div>
             <!--Answer Options Buttons-->
             <section>
                 <div class="blockOfAnswers container-fluid">
@@ -115,9 +116,7 @@
             </section>
         </div>
         <footer class="container-fluid text-center">
-                        <p>
-                            <small>Created by Sinead Murphy 2021</small>
-                        </p>
+            <p><small>Created by Sinead Murphy 2021</small></p>
             </footer>
     </body>
 
@@ -247,9 +246,8 @@
             </div>
         </div>
     </div>
+    <script src="assets/scripts/audio.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-    <script src="/assets/scripts/audio.js"></script>
 </html>

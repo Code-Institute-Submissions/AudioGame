@@ -81,7 +81,7 @@ To deploy this page to GitHub Pages from its GitHub repository, the following st
 
 Go to github and log into your account.
 Select (((######################)))project repository
-Above green Gitpod button, select settings, and scroll down to gitpod pages section
+Above green Gitpod button, select settings, and scroll down to github pages section
 In source: select master branch and root folder.
 Hit save. This may then require patient waiting for the site to be deployed!
 Scroll back down to the GitHub Pages section to retrieve the link to the deployed website. If it is not yet ready, make some tea and wait.
