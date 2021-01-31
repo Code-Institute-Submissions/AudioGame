@@ -9,26 +9,30 @@
 }
 
 #pageBody {
+    position: relative;
+    min-height: 100vh;
     background-color: var(--offWhite);
     z-index: 0;
 }
 #pageBody img {
-		position: absolute;
+        position: absolute;
+        background-attachment: fixed;
 		left: 0;
 		top: 0;
-		height: auto;
-		opacity: 0.3;
+		height: 100vh;
+		opacity: 0.5;
 		z-index: 0;
 	}
 
 .main {
-    padding: 10px 10px;
+    padding: 40px 10px;
 }	
 h1 {
-    padding: 20px 20px 20px 20px;
+    padding: 15px;
     color: var(--navy);
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
+    font-size: 30px;
 }
 
 .navbar {
@@ -58,7 +62,7 @@ h1 {
 }
 .playAgain {
     height: 50px;
-    width: 75px;
+    width: 75%;
     padding: 10px;
     background-color: var(--navy);
     border-radius: 20px;
@@ -72,8 +76,8 @@ h1 {
 .answersMiddleRow button,
 .answersBottomRow button {
     font-family: 'Josefin Sans', sans-serif;
-	max-width: 150px;
-	height: 120px;
+	max-width: 90%;
+	height: 100px;
 	padding: 5px;
 	margin: 20px auto;
 	background-color: var(--navy);
@@ -90,49 +94,25 @@ button {
     max-width: 75%;
 }
 button i {
+    color: var(--offWhite);
     font-size: 20px;
 }
-
-
-/* Larger Screens Styling
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    bottom: 0;
+}
+.hints p {
+     color: var(--offWhite);
+}
+.modal-content {
+   background-color: var(--offWhite); 
+}
 
 @media only screen and (min-width: 768px) {
-#pageBody img {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: auto;
-	height: 100%;
-	opacity: 0.3;
-	z-index: 0;
-}
-    .main {
-	margin-left: 200px;
-	padding: 0px 10px;
-}
-.sideNavbar {
-	height: 100%;
-	width: 200px;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background: linear-gradient(90deg, var(--navy), 90%, transparent);
-	overflow-x: hidden;
-	padding-top: 100px;
-}
-.sideNavbar h2,
-.sideNavbar p {
-    font-family: 'Josefin Sans', sans-serif;
-	padding: 2px 16px 2px 16px;
-	text-decoration: underline;
-	font-size: 20px;
-	color: var(--offWhite);
-	display: block;
-}
-.audioFileBox {
-    padding-top: 10px;
-}
+
 .scoreArea {
     padding-top: 20px;
 }
@@ -144,11 +124,10 @@ button i {
 }
 .playAgain {
     height: 100px;
-    width: 150px;
+    width: 100px;
     padding: 10px;
-    background-color: var(--navy);
-    border-radius: 20px;
-    box-shadow: 2px 2px 0px 0px var(--blackish);
+    
+    
 }
 .blockOfAnswers {
 	padding-top: 20px;
@@ -157,7 +136,6 @@ button i {
 .answersTopRow button,
 .answersMiddleRow button,
 .answersBottomRow button {
-    font-family: 'Josefin Sans', sans-serif;
 	width: 180px;
 	height: 120px;
 	padding: 20px;
