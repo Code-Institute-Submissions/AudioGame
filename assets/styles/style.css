@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
 /*font-family: 'Josefin Sans', sans-serif; */
 :root {
-    
     --reddish: #f05454;
     --blackish: #222831;
     --navy: #30475e;
@@ -24,41 +23,37 @@
     width: 100%;
     background-repeat: no-repeat;
     height: 200px;
-}	
-h1 {
-    padding: 15px;
-    color: var(--offWhite);
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
 }
-
 .navbar {
-	background-color: var(--navy);
-	padding-top: 10px;
+    background-color: var(--navy);
+    padding-top: 10px;
 }
 .dropdown-menu {
     background-color: var(--navy);
 }
 .navbar a {
-    font-family: 'Josefin Sans', sans-serif;
-	padding: 2px 16px 2px 16px;
-	text-decoration: underline;
-	font-size: 20px;
-	color: var(--offWhite);
-	display: block;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 2px 16px 2px 16px;
+    text-decoration: underline;
+    font-size: 20px;
+    color: var(--offWhite);
+    display: block;
 }
-.audioFileBox {
-    padding-top: 10px;
+h1 {
+    padding: 15px;
+    color: var(--offWhite);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
 }
 
-.scoreArea h5, .scoreArea label {
-    font-family: 'Josefin Sans', sans-serif;
+.scoreArea h5,
+.scoreArea label {
+    font-family: "Josefin Sans", sans-serif;
     font-weight: 700;
     font-size: 18px;
     text-align: center;
-    color: var( --offWhite);
-   
+    color: var(--offWhite);
 }
 .scoreArea {
     background-color: var(--navy);
@@ -68,13 +63,14 @@ h1 {
 .playAgain {
     height: 75px;
     width: 75px;
+    margin-top: 10px;
     padding: 10px 5px;
     background-color: var(--navy);
     border-radius: 20px;
     box-shadow: 2px 2px 0px 0px var(--blackish);
 }
 .blockOfAnswers {
-	padding-top: 20px;
+    padding-top: 20px;
 }
 
 .answersTopRow button,
@@ -82,15 +78,15 @@ h1 {
 .answersBottomRow button {
     height: 100px;
     max-width: 80px;
-	margin: 5px;
-	background-color: var(--navy);
+    margin: 5px;
+    background-color: var(--navy);
     color: var(--offWhite);
     border-radius: 20px;
     box-shadow: 2px 2px 0px 0px var(--blackish);
 }
 button h5 {
-font-family: 'Josefin Sans', sans-serif;
-font-size: 15px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 15px;
 }
 button:focus {
     outline: none;
@@ -99,7 +95,6 @@ button:focus {
 .audioFileBox button {
     height: auto;
     max-width: 90%;
-    
 }
 button i {
     color: var(--offWhite);
@@ -112,62 +107,60 @@ footer {
     height: 40px;
 }
 .hints p {
-     color: var(--offWhite);
+    color: var(--offWhite);
 }
 .modal-content {
-   background-color: var(--offWhite); 
+    border-radius: 20px;
+    background-color: var(--offWhite);
 }
-
+@media only screen and (min-width: 450px){
+    .answersTopRow button,
+    .answersMiddleRow button,
+    .answersBottomRow button {
+        height: 110px;
+        max-width: 100px;
+        margin: 10px 5px;
+    }
+}
 @media only screen and (min-width: 768px) {
+    .topOfPage {
+        padding-top: 40px;
+        height: 33vh;
+    }
+    h1 {
+        padding: 20px;
+        font-size: 40px;
+    }
+    .scoreArea {
+        height: 75px;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    .scoreArea h5,
+    .scoreArea label {
+        font-size: 20px;
+    }
+    .playAgain {
+        height: 100px;
+        width: 100px;
+        padding: 10px;
+    }
+    .blockOfAnswers {
+        padding-top: 20px;
+    }
 
-.scoreArea {
-    height: 75px;
-    background-color: var(--navy);
-    padding: 15px;
-    border-radius: 20px;
-}
-.scoreArea h5, .scoreArea label {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-    color: var( --offWhite);
-}
-.playAgain {
-    height: 100px;
-    width: 100px;
-    padding: 10px;
-    
-    
-}
-.blockOfAnswers {
-	padding-top: 20px;
-}
-
-.answersTopRow button,
-.answersMiddleRow button,
-.answersBottomRow button {
-	height: 100px;
-    max-width: 180px;
-    padding: 10px;
-	margin: 20px;
-	background-color: var(--navy);
-    color: var(--offWhite);
-    border-radius: 20px;
-    box-shadow: 2px 2px 0px 0px var(--blackish);
-}
-button h5 {
-font-family: 'Josefin Sans', sans-serif;
-font-size: 25px;
-}
-button:focus {
-    outline: none;
-}
-
-button {
-    max-width: 90%;
-}
-button i {
-    font-size: 35px;
-}
+    .answersTopRow button,
+    .answersMiddleRow button,
+    .answersBottomRow button {
+        height: 100px;
+        max-width: 180px;
+        padding: 10px;
+        margin: 20px;
+    }
+    button h5 {
+        font-size: 25px;
+    }
+    button i {
+        font-size: 35px;
+    }
 }

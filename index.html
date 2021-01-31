@@ -3,70 +3,74 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
         <link rel="stylesheet" href="assets/styles/style.css" />
+        <link rel="icon" type="image/x-icon" href="assets/styles/images/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
         <title>Audio Game</title>
     </head>
     <body class="pageBody">
-        <!-- Navbar side for big screens, top for small-->
-<header>
-        <nav class="navbar navbar-expand-lg container-fluid">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span><i class="fa fa-cog"></i></span>
-            </button>
+        <!-- Navbar: bootstrap classes with hyphen, own styles with camelCase-->
+        <header>
+            <nav class="navbar navbar-expand-lg container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fa fa-cog"></i></span>
+                </button>
 
-            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Interval Type
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" id="melodic">Melodic</a>
-                            <a class="dropdown-item" id="harmonic">Harmonic</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" data-target="#helpModal">
-                            Help
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Interval Type
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" id="melodic">Melodic</a>
+                                <a class="dropdown-item" id="harmonic">Harmonic</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="modal" data-target="#helpModal">
+                                Help
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
         <div class="main">
             <div class="topOfPage container-fluid">
                 <h1 class="text-center">Aural Training Game - Music Intervals!</h1>
-            
-            <!-- Play repeat next buttons -->
-            <section>
-                <div class="audioFileBox row container-fluid">
-                    <div class="col-3 offset-md-2 col-md-2 text-center">
-                        <button type="button" class="btn playAgain" id="startGame">
-                            <i class="fas fa-play" alt="Start Game"></i>
-                        </button>
+
+                <!-- Play repeat next buttons -->
+                <section>
+                    <div class="audioFileBox row container-fluid">
+                        <div class="col-3 offset-md-2 col-md-2 text-center">
+                            <button type="button" class="btn playAgain" id="startGame">
+                                <i class="fas fa-play" alt="Start Game"></i>
+                            </button>
+                        </div>
+                        <div class="col-3 col-md-2 text-center">
+                            <button type="button" class="btn playAgain" id="playAgain">
+                                <i class="fas fa-redo-alt" alt="Repeat"></i>
+                            </button>
+                        </div>
+                        <div class="col-3 col-md-2 text-center">
+                            <button type="button" class="btn playAgain" id="skip">
+                                <i class="fas fa-forward" alt="Skip Interval"></i>
+                            </button>
+                        </div>
+                        <div class="scoreArea col-3 offset-md-2 col-md-2 text-center">
+                            <h5>
+                                Score<br />
+                                <label id="playerScore">0</label>
+                            </h5>
+                        </div>
                     </div>
-                    <div class="col-3 col-md-2 text-center">
-                        <button type="button" class="btn playAgain" id="playAgain">
-                            <i class="fas fa-redo-alt" alt="Repeat"></i>
-                        </button>
-                    </div>
-                    <div class="col-3 col-md-2 text-center">
-                        <button type="button" class="btn playAgain" id="skip">
-                            <i class="fas fa-forward" alt="Skip Interval"></i>
-                        </button>
-                    </div>
-                    <div class="scoreArea offset-1 col-2 offset-md-2 col-md-2 text-center">
-                        <h5>Score<br><label id="playerScore">0</label></h5>
-                        
-                    </div>
-                </div>
-            </section>
-           </div>
+                </section>
+            </div>
             <!--Answer Options Buttons-->
             <section>
                 <div class="blockOfAnswers container-fluid">
@@ -117,7 +121,7 @@
         </div>
         <footer class="container-fluid text-center">
             <p><small>Created by Sinead Murphy 2021</small></p>
-            </footer>
+        </footer>
     </body>
 
     <!-- Modal -->
@@ -151,7 +155,9 @@
                             Maj2
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                            <p class="dropdown-item">The first two notes in <em><strong>"doh, a</strong></em> deer"!</p>
+                            <p class="dropdown-item">
+                                The first two notes in <em><strong>"doh, a</strong></em> deer"!
+                            </p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
@@ -167,11 +173,13 @@
                             Maj3
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink4">
-                            <p class="dropdown-item"><em><strong>"oh, woah,</strong></em> oh, Sweet child of mine!</p>
+                            <p class="dropdown-item">
+                                <em><strong>"oh, woah,</strong></em> oh, Sweet child of mine!
+                            </p>
                         </div>
                     </div>
                 </div>
-                 <div class="row hints">
+                <div class="row hints">
                     <div class="dropdown col-3">
                         <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Perf4
@@ -193,7 +201,9 @@
                             Perf5
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink7">
-                            <p class="dropdown-item"><em><strong>Twinkle twinkle</strong></em>, little star</p>
+                            <p class="dropdown-item">
+                                <em><strong>Twinkle twinkle</strong></em>, little star
+                            </p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
@@ -205,13 +215,15 @@
                         </div>
                     </div>
                 </div>
-                 <div class="row hints">
+                <div class="row hints">
                     <div class="dropdown col-3">
                         <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Maj6
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink9">
-                            <p class="dropdown-item"><em><strong>My bon</strong></em>nie lies over the ocean</p>
+                            <p class="dropdown-item">
+                                <em><strong>My bon</strong></em>nie lies over the ocean
+                            </p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
@@ -219,7 +231,9 @@
                             Min7
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink10">
-                            <p class="dropdown-item"><em><strong>The winner takes</strong></em> it all</p>
+                            <p class="dropdown-item">
+                                <em><strong>The winner takes</strong></em> it all
+                            </p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
@@ -227,7 +241,9 @@
                             Maj7
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink11">
-                            <p class="dropdown-item"><em><strong>Take on</strong></em> me - A-ha</p>
+                            <p class="dropdown-item">
+                                <em><strong>Take on</strong></em> me - A-ha
+                            </p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
@@ -235,11 +251,13 @@
                             Octave
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink12">
-                            <p class="dropdown-item"><em><strong>Some-where</strong></em> over the rainbow</p>
+                            <p class="dropdown-item">
+                                <em><strong>Some-where</strong></em> over the rainbow
+                            </p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="modal-footer">
                     <button type="button" class="btn" data-dismiss="modal">Got It!</button>
                 </div>
