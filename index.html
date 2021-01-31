@@ -44,22 +44,22 @@
             <div class="topOfPage container-fluid">
                 <h1 class="text-center">Aural Training Game - Music Intervals!</h1>
 
-                <!-- Play repeat next buttons -->
+                <!-- Play/repeat/next buttons -->
                 <section>
                     <div class="audioFileBox row container-fluid">
                         <div class="col-3 offset-md-2 col-md-2 text-center">
                             <button type="button" class="btn playAgain" id="startGame">
-                                <i class="fas fa-play" alt="Start Game"></i>
+                                <i class="fas fa-play"></i>
                             </button>
                         </div>
                         <div class="col-3 col-md-2 text-center">
                             <button type="button" class="btn playAgain" id="playAgain">
-                                <i class="fas fa-redo-alt" alt="Repeat"></i>
+                                <i class="fas fa-redo-alt"></i>
                             </button>
                         </div>
                         <div class="col-3 col-md-2 text-center">
                             <button type="button" class="btn playAgain" id="skip">
-                                <i class="fas fa-forward" alt="Skip Interval"></i>
+                                <i class="fas fa-forward"></i>
                             </button>
                         </div>
                         <div class="scoreArea col-3 offset-md-2 col-md-2 text-center">
@@ -76,44 +76,44 @@
                 <div class="blockOfAnswers container-fluid">
                     <div class="row justify-content-center answersTopRow">
                         <button type="button" class="col-3 offset-md-2 col-md-2 intervalOptions" id="button0" onclick="play(0)">
-                            <h5>Minor 2nd</h5>
+                            Minor 2nd
                         </button>
                         <button type="button" class="col-3 col-md-2 intervalOptions" id="button1" onclick="play(1)">
-                            <h5>Major 2nd</h5>
+                            Major 2nd
                         </button>
                         <button type="button" class="col-3 col-md-2 intervalOptions" id="button2" onclick="play(2)">
-                            <h5>Minor 3rd</h5>
+                            Minor 3rd
                         </button>
                         <button type="button" class="col-3 col-md-2 intervalOptions" id="button3" onclick="play(3)">
-                            <h5>Major 3rd</h5>
+                            Major 3rd
                         </button>
                     </div>
                     <div class="row justify-content-center answersMiddleRow">
                         <button type="button" class="col-3 col-md-2 offset-md-2 intervalOptions" id="button4" onclick="play(4)">
-                            <h5>Perf. 4th</h5>
+                            Perf. 4th
                         </button>
                         <button type="button" class="col-3 col-md-2 intervalOptions" id="button5" onclick="play(5)">
-                            <h5>Tritone!</h5>
+                            Tritone!
                         </button>
                         <button type="button" class="col-3 col-md-2 intervalOptions" id="button6" onclick="play(6)">
-                            <h5>Perf. 5th</h5>
+                            Perf. 5th
                         </button>
                         <button type="button" class="col-3 col-md-2 intervalOptions" id="button7" onclick="play(7)">
-                            <h5>Minor 6th</h5>
+                            Minor 6th
                         </button>
                     </div>
                     <div class="row justify-content-center answersBottomRow">
                         <button type="button" class="col-3 col-md-2 offset-md-2 intervalOptions" id="button8" onclick="play(8)">
-                            <h5>Major 6th</h5>
+                            Major 6th
                         </button>
                         <button type="button" class="col-3 col-md-2 intervalOptions" id="button9" onclick="play(9)">
-                            <h5>Minor 7th</h5>
+                            Minor 7th
                         </button>
                         <button type="button" class="col-3 col-md-2 intervalOptions" id="button10" onclick="play(10)">
-                            <h5>Major 7th</h5>
+                            Major 7th
                         </button>
                         <button type="button" class="col-3 col-md-2 intervalOptions" id="button11" onclick="play(11)">
-                            <h5>Octave</h5>
+                            Octave
                         </button>
                     </div>
                 </div>
@@ -125,14 +125,11 @@
     </body>
 
     <!-- Modal -->
-    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Gameplay</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <h5 class="modal-title">Gameplay</h5>
                 </div>
                 <div class="modal-body">
                     Start game and listen to the two notes. Guess what the interval between them is, from the 12 options below. There are a possible 5 points for each interval. If you're not sure, you can skip and get no points, or you can
@@ -143,36 +140,36 @@
                 </div>
                 <div class="row hints">
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Min2
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">A minor second sounds like the jaws theme!</p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Maj2
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">
                                 The first two notes in <em><strong>"doh, a</strong></em> deer"!
                             </p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Min3
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink3">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">Seven Nation Army Theme opening notes!</p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Maj3
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink4">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">
                                 <em><strong>"oh, woah,</strong></em> oh, Sweet child of mine!
                             </p>
@@ -181,76 +178,76 @@
                 </div>
                 <div class="row hints">
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Perf4
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink5">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">Opening to "Amazing Grace"</p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tritone
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink6">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">Start of the simpsons theme!</p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Perf5
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink7">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">
                                 <em><strong>Twinkle twinkle</strong></em>, little star
                             </p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Min6
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink8">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">Joplins 'The Entertainer'</p>
                         </div>
                     </div>
                 </div>
                 <div class="row hints">
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Maj6
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink9">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">
                                 <em><strong>My bon</strong></em>nie lies over the ocean
                             </p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Min7
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink10">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">
                                 <em><strong>The winner takes</strong></em> it all
                             </p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton11" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Maj7
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink11">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">
                                 <em><strong>Take on</strong></em> me - A-ha
                             </p>
                         </div>
                     </div>
                     <div class="dropdown col-3">
-                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Octave
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink12">
+                        <div class="dropdown-menu">
                             <p class="dropdown-item">
                                 <em><strong>Some-where</strong></em> over the rainbow
                             </p>

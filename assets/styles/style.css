@@ -84,7 +84,7 @@ h1 {
     border-radius: 20px;
     box-shadow: 2px 2px 0px 0px var(--blackish);
 }
-button h5 {
+.blockOfAnswers button {
     font-family: "Josefin Sans", sans-serif;
     font-size: 15px;
 }
@@ -157,7 +157,7 @@ footer {
         padding: 10px;
         margin: 20px;
     }
-    button h5 {
+    .blockOfAnswers button {
         font-size: 25px;
     }
     button i {
