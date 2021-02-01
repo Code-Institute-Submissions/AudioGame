@@ -6,6 +6,27 @@ let lastRandomNote;
 let allNotesArray;
 let allNotesArrayHarmonic;
 let randomNoteHarmonic;
+
+
+// Change Harmonic/Melodic function
+var intervalTypeSwitch = document.getElementById("intervalTypeSwitch");
+
+var intervalType = intervalTypeSwitch.getElementsByClassName("intervalType");
+
+for (var i = 0; i < intervalType.length; i++) {
+  intervalType[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+
+    
+    
+      current[0].className = current[0].className.replace(" active", "");
+    
+
+    // Add the active class to the current/clicked button
+    this.className += " active";
+  });
+}
+
 //Function to fetch audio files - Web Audio API
 const fetchAudioFile = async (fileName) => {
     if (!fileName) throw new Error("File Name is required");
@@ -194,18 +215,18 @@ allNotesArrayHarmonic = await Promise.all([randomHarmonicMinorSecond, randomHarm
 initialiseSoundFiles();
 initialiseHarmonicSoundFiles();
 
-// Web audio API playback function with randomised version of allNotesArray
+            // Web audio API playback function with randomised version of allNotesArray
     function playback() {
-   // let randomNote = allNotesArray[Math.floor(Math.random() * allNotesArray.length)];
-    let randomNoteHarmonic = allNotesArrayHarmonic[Math.floor(Math.random() * allNotesArrayHarmonic.length)];  
+            // let randomNote = allNotesArray[Math.floor(Math.random() * allNotesArray.length)];
+    let randomNote = allNotesArray[Math.floor(Math.random() * allNotesArray.length)];  
     const playSound = ctx.createBufferSource();
-    playSound.buffer = randomNoteHarmonic;
+    playSound.buffer = randomNote;
     playSound.connect(ctx.destination);
     playSound.start(ctx.currentTime);
-    randomNoteIndex = allNotesArrayHarmonic.indexOf(randomNoteHarmonic);
+    randomNoteIndex = allNotesArray.indexOf(randomNote);
     console.log(randomNoteIndex);
 }
-// Play last interval again
+            // Play last interval again
 function replay() {
 
     lastRandomNote = allNotesArray[randomNoteIndex];
@@ -214,19 +235,40 @@ function replay() {
     playSound.buffer = lastRandomNote;
     playSound.connect(ctx.destination);
     playSound.start(ctx.currentTime);
-
-
 }
-// Event listeners for mouse instructions for play and repeat
+            // PLAYBACK OF HARMONIC FILES
+function playbackHarmonic() {
+    let randomNoteHarmonic = allNotesArrayHarmonic[Math.floor(Math.random() * allNotesArrayHarmonic.length)];  
+    const playSound = ctx.createBufferSource();
+    playSound.buffer = randomNoteHarmonic;
+    playSound.connect(ctx.destination);
+    playSound.start(ctx.currentTime);
+    randomNoteIndex = allNotesArrayHarmonic.indexOf(randomNoteHarmonic);
+    console.log(randomNoteIndex);
+}
+            // Play last interval again
+function replayHarmonic() {
+
+    lastRandomNoteHarmonic = allNotesArrayHarmonic[randomNoteIndex];
+
+    const playSound = ctx.createBufferSource();
+    playSound.buffer = lastRandomNoteHarmonic;
+    playSound.connect(ctx.destination);
+    playSound.start(ctx.currentTime);
+}
+
+
+            // Event listeners for mouse instructions for play and repeat
+          
 startGame.addEventListener("mousedown", playback);
 playAgain.addEventListener("mousedown", replay);
 
 
-// Initialise scores
+            // Initialise scores
 var score = 0;
 var addScore = 5;
 
-// Function to determine if the answer is right or wrong (note: the button IDs in index.html correspond to the correct audio file position in allNotesArray)
+            // Function to determine if the answer is right or wrong (note: the button IDs in index.html correspond to the correct audio file position in allNotesArray)
 function play(guessIndex) {
 
     if (guessIndex !== randomNoteIndex) {
@@ -242,7 +284,7 @@ function play(guessIndex) {
 };
 
 
-//format start button, replay button, skip button and create 'next' option
+            //format start button, replay button, skip button and create 'next' option
 
 
 

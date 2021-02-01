@@ -31,6 +31,10 @@
 .dropdown-menu {
     background-color: var(--navy);
 }
+.dropdown-item.active, .dropdown-item:active  {
+  color: var(--navy);
+  background-color: var(--offWhite);
+}
 .navbar a {
     font-family: "Josefin Sans", sans-serif;
     padding: 2px 16px 2px 16px;
