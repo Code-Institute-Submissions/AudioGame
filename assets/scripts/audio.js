@@ -175,6 +175,7 @@ function play(guessIndex) {
     var anotherGame = document.getElementById("playAnotherGame");
         anotherGame.onclick = function() {
         score = 0;
+        count = 1;
         playerScore.innerHTML = score;
         document.getElementById(`startGame`).style.opacity = "1";
             $('#onPageLoadModal').modal('show');

@@ -114,14 +114,18 @@ footer {
     border-radius: 20px;
     background-color: var(--offWhite);
 }
-.onLoadModal {
+.onLoadModal, .endGameModal {
     background-color: var(--navy);
     display: block;
 }
-.onLoadModal h5, .onLoadModal p, .onLoadModal a {
+.onLoadModal h4, .onLoadModal h5, 
+.endGameModal h4, .endGameModal h5, .intervalType, #playAnotherGame, #loadGame {
     font-family: "Josefin Sans", sans-serif;
-    text-decoration: underline;
     color: var(--offWhite);
+}
+.intervalType, #playAnotherGame, #loadGame {
+    text-decoration: underline;
+    font-size: 20px;
 }
 .intervalType.active, .intervalType:active  {
   color: var(--navy);
