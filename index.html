@@ -15,19 +15,10 @@
     <body class="pageBody">
         <!-- Navbar: bootstrap classes with hyphen, own styles with camelCase-->
         <header>
-            <nav class="navbar navbar-expand-lg container-fluid">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><i class="fa fa-cog"></i></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="modal" data-target="#helpModal">
-                                Help
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+            <nav class="navbar container-fluid justify-content-center">
+                <a class="nav-link" data-toggle="modal" data-target="#helpModal">
+                    Help
+                </a>
             </nav>
         </header>
         <div class="main">
@@ -48,7 +39,7 @@
                             </button>
                         </div>
                         <div class="col-3 col-md-2 text-center">
-                            <button type="button" class="btn playAgain" id="next">
+                            <button type="button" class="btn playAgain" id="next" onclick="click()">
                                 <i class="fas fa-forward"></i>
                             </button>
                         </div>
@@ -114,7 +105,8 @@
         </footer>
     </body>
 
-    <!-- Modals -->
+    <!-- MODALS -->
+    <!-- On page load modal -->
     <div class="modal" id="onPageLoadModal" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content onLoadModal">
@@ -124,12 +116,28 @@
       <div class="modal-body">
           <p>Choose your interval type below and click start to load game. Press play to start, to hear an interval again, click the rewind button, to move on to the next interval, click the forward button.</p>
         <div id="intervalTypeSwitch">
-                <a class="intervalType active" id="melodic"> -Melodic- </a><br>
-                <a class="intervalType" id="harmonic"> -Harmonic- </a>
+                <a class="intervalType active" type="button" id="melodic"> -Melodic- </a><br>
+                <a class="intervalType" type="button" id="harmonic"> -Harmonic- </a>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" id="loadGame" class="btn btn-secondary" data-dismiss="modal">Begin</button>
+        <button type="button" id="loadGame" onclick="onStartGame()" class="btn btn-secondary" data-dismiss="modal">Begin</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- On page load modal -->
+    <div class="modal" id="onGameOverModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content onLoadModal">
+      <div class="modal-header">
+        <h5 class="modal-title">Game Over!!!</h5>
+      </div>
+      <div class="modal-body">
+          <p id="gameOverScreen"> </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="playAnotherGame" class="btn btn-secondary" data-dismiss="modal">Play Again</button>
       </div>
     </div>
   </div>
@@ -145,8 +153,11 @@
                     Start game and listen to the two notes. Guess what the interval between them is, from the 12 options below. There are a possible 5 points for each interval. If you're not sure, you can skip and get no points, or you can
                     guess and lose one point for each wrong guess.
                     <br />
-                    Good Luck!! <br />
+                    <br />
                     See below for hints on how each interval MIGHT sound!
+                    <br />
+                    <br />
+                    Good Luck!! <br />
                 </div>
                 <div class="row hints">
                     <div class="dropdown col-3">
