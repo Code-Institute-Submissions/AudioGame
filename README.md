@@ -6,8 +6,10 @@ Volume Control (https://stackoverflow.com/questions/29205255/how-to-control-brow
 tested playback of audio files using Web Audio API
 created background and buttons for game
 Connected playback function to replay button.
+Changing active class - https://www.w3schools.com/howto/howto_js_active_element.asp
 
-
+Score counter -- https://stackoverflow.com/questions/40993396/add-a-score-counter-to-a-game-using-html-and-javascript/47168970
+Change Inner Css after time limit https://stackoverflow.com/questions/62441811/how-to-change-innerhtml-every-few-seconds
 # Audio Training Game
 
 ## Interactive Frontend Project - Code Institute

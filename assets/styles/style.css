@@ -31,10 +31,7 @@
 .dropdown-menu {
     background-color: var(--navy);
 }
-.dropdown-item.active, .dropdown-item:active  {
-  color: var(--navy);
-  background-color: var(--offWhite);
-}
+
 .navbar a {
     font-family: "Josefin Sans", sans-serif;
     padding: 2px 16px 2px 16px;
@@ -117,6 +114,22 @@ footer {
     border-radius: 20px;
     background-color: var(--offWhite);
 }
+.onLoadModal {
+    background-color: var(--navy);
+    display: block;
+}
+.onLoadModal h5, .onLoadModal p, .onLoadModal a {
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: underline;
+    color: var(--offWhite);
+}
+.intervalType.active, .intervalType:active  {
+  color: var(--navy);
+  background-color: var(--offWhite);
+  border-radius: 5px;
+}
+
+
 @media only screen and (min-width: 450px){
     .answersTopRow button,
     .answersMiddleRow button,
