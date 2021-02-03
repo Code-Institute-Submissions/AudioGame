@@ -47,7 +47,6 @@ h1 {
     font-weight: 700;
     font-size: 30px;
 }
-
 .scoreArea h5,
 .scoreArea label {
     font-family: "Josefin Sans", sans-serif;
@@ -70,8 +69,16 @@ h1 {
     border-radius: 20px;
     box-shadow: 2px 2px 0px 0px var(--blackish);
 }
-.blockOfAnswers {
+.sectionHeading {
     padding-top: 20px;
+    text-align: center;
+    color: var(--navy);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+.blockOfAnswers {
+    padding-top: 10px;
 }
 
 .answersTopRow button,
@@ -123,6 +130,9 @@ footer {
     font-family: "Josefin Sans", sans-serif;
     color: var(--offWhite);
 }
+.intervalType {
+    background-color: var(--navy);
+}
 .intervalType, #playAnotherGame, #loadGame {
     text-decoration: underline;
     font-size: 20px;
@@ -166,8 +176,16 @@ footer {
         width: 100px;
         padding: 10px;
     }
+    .sectionHeading {
+    padding-top: 20px;
+    text-align: center;
+    color: var(--navy);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
     .blockOfAnswers {
-        padding-top: 20px;
+        padding-top: 10px;
     }
 
     .answersTopRow button,
@@ -176,7 +194,7 @@ footer {
         height: 100px;
         max-width: 180px;
         padding: 10px;
-        margin: 20px;
+        margin: 15px 20px;
     }
     .blockOfAnswers button {
         font-size: 25px;

@@ -54,6 +54,7 @@
             </div>
             <!--Answer Options Buttons-->
             <section>
+                <h5 class="sectionHeading">What do you hear?</h5>
                 <div class="blockOfAnswers container-fluid">
                     <div class="row justify-content-center answersTopRow">
                         <button type="button" class="col-3 offset-md-2 col-md-2 intervalOptions" id="button0" onclick="play(0)">
@@ -108,41 +109,42 @@
     <!-- MODALS -->
     <!-- On page load modal -->
     <div class="modal" id="onPageLoadModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content onLoadModal">
-      <div class="modal-header">
-        <h4 class="modal-title">Play the Interval Training Game</h4>
-      </div>
-      <div class="modal-body">
-          <h5>Choose your interval type below and click start to load game. Press play to start, to hear an interval again, click the rewind button, to move on to the next interval, click the forward button.</h5><br>
-        <div id="intervalTypeSwitch">
-                <a class="intervalType active" type="button" id="melodic"> -Melodic- </a><br>
-                <a class="intervalType" type="button" id="harmonic"> -Harmonic- </a>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content onLoadModal">
+                <div class="modal-header">
+                    <h4 class="modal-title">Play the Interval Training Game</h4>
+                </div>
+                <div class="modal-body">
+                    <h5>Choose your interval type below and click start to load game. Press play to start, to hear an interval again, click the rewind button, to move on to the next interval, click the forward button.</h5>
+                    <br />
+                    <div id="intervalTypeSwitch">
+                        <button class="intervalType active" type="button" id="melodic"> -Melodic- </button><br />
+                        <button class="intervalType" type="button" id="harmonic"> -Harmonic- </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="loadGame" onclick="onStartGame()" class="btn btn-secondary" data-dismiss="modal">Begin</button>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="loadGame" onclick="onStartGame()" class="btn btn-secondary" data-dismiss="modal">Begin</button>
-      </div>
     </div>
-  </div>
-</div>
     <!-- On page load modal -->
     <div class="modal" id="onGameOverModal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content endGameModal">
-      <div class="modal-header">
-        <h4 class="modal-title">Game Over!!!</h4>
-      </div>
-      <div class="modal-body">
-          <h5 id="gameOverScreen"> </h5>
-      </div>
-      <div class="modal-footer">
-        <button type="button" id="playAnotherGame" class="btn btn-secondary" data-dismiss="modal">Play Again</button>
-      </div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content endGameModal">
+                <div class="modal-header">
+                    <h4 class="modal-title">Game Over!!!</h4>
+                </div>
+                <div class="modal-body">
+                    <h5 id="gameOverScreen"></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="playAnotherGame" class="btn btn-secondary" data-dismiss="modal">Play Again</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<!--Help Modal-->
+    <!--Help Modal-->
     <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -275,7 +277,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="modal-footer">
                     <button type="button" class="btn" data-dismiss="modal">Got It!</button>
                 </div>
