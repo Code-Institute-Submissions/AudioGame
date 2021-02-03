@@ -7,40 +7,54 @@ let allNotesArray;
 let allNotesArrayHarmonic;
 let randomNoteHarmonic;
 let correctAnswer;
+let currentIntervalID;
 let isMelodic;
+let selectedInterval;
 var score = 0;
 var addScore = 5;
 
 //On Load Page Modal
 $(window).on('load', function() {
     $('#onPageLoadModal').modal('show');
+
+
+
+    // Change Harmonic/Melodic function
+
+    var intervalTypeSwitch = document.getElementById("intervalTypeSwitch");
+
+    var intervalType = intervalTypeSwitch.getElementsByClassName("intervalType");
+
+    for (var i = 0; i < intervalType.length; i++) {
+        intervalType[i].addEventListener("click", async function() {
+            currentIntervalID = document.getElementsByClassName("active");
+
+            currentIntervalID[0].className = currentIntervalID[0].className.replace(" active", "");
+
+            this.className += " active";
+
+            return selectedInterval = await $("#intervalTypeSwitch .active").attr('id');
+        });
+        
+    }
+    
 });
+async function IsMelodic() {
+                await selectedInterval;
+                if (selectedInterval == 'melodic') {
+                    return true;
+                } else {
+                    return false;
+                }
+                
+            }
+            console.log(isMelodic);
 
 // On close start game modal
 function onStartGame() {
     score = 0;
+    loadGame.addEventListener("mousedown", console.log(selectedInterval));
 }
-
-// Change Harmonic/Melodic function
-var currentIntervalID;
-var intervalTypeSwitch = document.getElementById("intervalTypeSwitch");
-
-var intervalType = intervalTypeSwitch.getElementsByClassName("intervalType");
-
-for (var i = 0; i < intervalType.length; i++) {
-    intervalType[i].addEventListener("click", function() {
-        var currentIntervalID = document.getElementsByClassName("active");
-
-        currentIntervalID[0].className = currentIntervalID[0].className.replace(" active", "");
-
-        this.className += " active";
-
-    });
-
-}
-var selectedInterval = $("#intervalTypeSwitch .active").attr('id');
-loadGame.addEventListener("mousedown", console.log(selectedInterval));;
-
 //Function to fetch audio files - Web Audio API
 const fetchAudioFile = async (fileName) => {
     if (!fileName) throw new Error("File Name is required");
@@ -59,6 +73,7 @@ initialiseSoundFiles();
 initialiseHarmonicSoundFiles();
 
 // Web audio API playback function with randomised version of allNotesArray
+
 function playback() {
     // let randomNote = allNotesArray[Math.floor(Math.random() * allNotesArray.length)];
     let randomNote = allNotesArray[Math.floor(Math.random() * allNotesArray.length)];
@@ -108,11 +123,16 @@ function changePlayButton() {
     document.getElementById(`startGame`).style.opacity = "0";
 }
 // Event listeners for mouse instructions for play and repeat
-
-startGame.addEventListener("mousedown", playback);
+if (IsMelodic == true) {
+    startGame.addEventListener("mousedown", playback);
+    playAgain.addEventListener("mousedown", replay);
+    next.addEventListener('mousedown', playback)
+} else {
+    startGame.addEventListener("mousedown", playbackHarmonic);
+    playAgain.addEventListener("mousedown", replayHarmonic);
+    next.addEventListener('mousedown', playbackHarmonic)
+}
 startGame.addEventListener("mousedown", changePlayButton);
-playAgain.addEventListener("mousedown", replay);
-next.addEventListener('mousedown', playback)
 next.addEventListener('mousedown', revertNextCSS)
 
 
@@ -122,7 +142,7 @@ var button = document.getElementById("next"),
     count = 1;
 button.onclick = function() {
     count += 1;
-    if (count === 3) {
+    if (count === 20) {
         document.getElementById(`next`).style.backgroundColor = "#e8e8e8";
     }
 
@@ -135,23 +155,23 @@ function play(guessIndex) {
 
     if (guessIndex !== randomNoteIndex) {
         score--;
-        document.getElementById(`button${guessIndex}`).style.backgroundColor = "#F7977A";
+        document.getElementById(`button${guessIndex}`).style.backgroundColor = "#D91909";
         setTimeout(function() {
             document.getElementById(`button${guessIndex}`).style.backgroundColor = ""
         }, 500);
     } else {
         correctAnswer = true;
         score += addScore;
-        document.getElementById(`button${guessIndex}`).style.backgroundColor = "#82CA9D";
+        document.getElementById(`button${guessIndex}`).style.backgroundColor = "#22B114";
         setTimeout(function() {
             document.getElementById(`button${guessIndex}`).style.backgroundColor = ""
         }, 500);
         setTimeout(function() {
-            document.getElementById(`next`).style.backgroundColor = "#82CA9D"
-        }, 500);
+            document.getElementById(`next`).style.backgroundColor = "#22B114"
+        }, 750);
 
 
-        if (correctAnswer === true && count === 3) {
+        if (correctAnswer === true && count === 20) {
             var endScore = document.getElementById("gameOverScreen");
             if (score >= 75) {
                 endScore.innerHTML = (`Congratulations Mozart!! <br/>You got ${score}/100`)
@@ -164,23 +184,21 @@ function play(guessIndex) {
                 $('#onGameOverModal').modal('show');
             }
         }
-        
+
     };
     var playerScore = document.getElementById("playerScore");
     playerScore.innerHTML = score;
-    
-    
+
+
     //reset to zero on new game
 
     var anotherGame = document.getElementById("playAnotherGame");
-        anotherGame.onclick = function() {
+    anotherGame.onclick = function() {
         score = 0;
         count = 1;
+        isMelodic = undefined;
         playerScore.innerHTML = score;
         document.getElementById(`startGame`).style.opacity = "1";
-            $('#onPageLoadModal').modal('show');
-        }
+        $('#onPageLoadModal').modal('show');
+    }
 };
-
-
-//format start button, replay button, skip button and create 'next' option
