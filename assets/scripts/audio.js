@@ -46,7 +46,10 @@ $(window).on('load', async function() {
 function IsMelodic() {
     return selectedInterval == 'melodic';
 }
-           
+loadGame.addEventListener("mousedown", function() {
+    const loader = document.querySelector(".loader");
+    loader.className += " hidden";
+}) 
 
 // On close start game modal
 function onStartGame() {
