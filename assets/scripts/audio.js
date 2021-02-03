@@ -1,5 +1,15 @@
 // Declare Variables
-const ctx = new AudioContext();
+var AudioContext = window.AudioContext // Default
+    || window.webkitAudioContext 
+    || false; 
+
+if (AudioContext) {
+    var ctx = new AudioContext;
+    
+} else {
+    alert("Sorry, but the Web Audio API is not supported by your browser. Please, consider upgrading to the latest version or downloading Google Chrome or Mozilla Firefox");
+}
+
 let audio;
 let randomNoteIndex;
 let lastRandomNote;
