@@ -148,7 +148,8 @@ var button = document.getElementById("next"),
 button.onclick = function() {
     count += 1;
     if (count === 20) {
-        document.getElementById(`next`).style.backgroundColor = "#e8e8e8";
+        document.getElementById(`next`).style.backgroundColor = "var(--offWhite";
+        document.getElementById(`next`).disabled = true;
     }
 
 };
@@ -167,12 +168,12 @@ function play(guessIndex) {
     } else {
         correctAnswer = true;
         score += addScore;
-        document.getElementById(`button${guessIndex}`).style.backgroundColor = "#22B114";
+        document.getElementById(`button${guessIndex}`).style.backgroundColor = "var(--greenish";
         setTimeout(function() {
             document.getElementById(`button${guessIndex}`).style.backgroundColor = ""
         }, 500);
         setTimeout(function() {
-            document.getElementById(`next`).style.backgroundColor = "#22B114"
+            document.getElementById(`next`).style.backgroundColor = "var(--greenish"
         }, 750);
 
 
@@ -201,6 +202,8 @@ function play(guessIndex) {
     anotherGame.onclick = function() {
         score = 0;
         count = 1;
+        document.getElementById(`next`).disabled = false;
+        document.getElementById(`next`).style.backgroundColor = "";
         isMelodic = undefined;
         playerScore.innerHTML = score;
         document.getElementById(`startGame`).style.opacity = "1";

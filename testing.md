@@ -46,3 +46,6 @@ The game at several stages of development was sent to two people to try. One had
 - Unresolved
 
 2. Sound files are larger than synthesized sound. This causes a loading issue. A future version of the game where notes are synthesized in the Web Audio API would allow for more variety and should use less space.
+
+
+loader https://www.youtube.com/watch?v=xuA83OYTE7I

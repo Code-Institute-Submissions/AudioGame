@@ -73,6 +73,9 @@ Resources:
 - [Stack Overflow](https://stackoverflow.com/)
 - [Web Audio API Tutorial Videos](https://www.youtube.com/watch?v=3NgVlAscdcA&list=PLMPgoZdlPumc_llMSynz5BqT8dTwr5sZ2)
 - [w3schools](https://www.w3schools.com/)
+- [AjaxLoad](http://www.ajaxload.info/)
+- [dcode](https://www.youtube.com/watch?v=xuA83OYTE7I)
+
 ---
 ## Testing
 See [Testing.md](/workspace/AudioGame/testing.md) for development
