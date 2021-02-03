@@ -1,8 +1,6 @@
 # Notes
 
-Fixed Sidebar: https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp
 Laoding audio files in Web Audio API tutorial https://www.youtube.com/watch?v=3NgVlAscdcA&list=PLMPgoZdlPumc_llMSynz5BqT8dTwr5sZ2
-Volume Control (https://stackoverflow.com/questions/29205255/how-to-control-browsers-volumes-via-javascript/29213912#29213912)
 tested playback of audio files using Web Audio API
 created background and buttons for game
 Connected playback function to replay button.
@@ -47,9 +45,9 @@ Settings:
 - a hints sheet for how to play, and how to recognise different intervals
 
 # FIX WIREFRAMES!!!!!!!!
-[Desktop](assets/wireframes/md-DesktopWireframe.png)
+[Desktop](/workspace/AudioGame/assets/wireframes/md-DesktopWireframe.png)
 
-[Mobile](assets/wireframes/mobileWireframe.png)
+[Mobile](/workspace/AudioGame/assets/wireframes/mobileWireframe.png)
 
 
 ## Execution
@@ -67,11 +65,27 @@ This project was created using:
 - Logic Pro 
 - [Unsplash](https://unsplash.com/)
 
-######################################INCLUDE FORMATTERS HERE
+Resources:
+
+- [HTML and CSS Formatter](https://www.freeformatter.com/)
+- [HTML and CSS Validators](https://validator.w3.org/)
+- [JavaScript Formatter](https://beautifier.io/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [Web Audio API Tutorial Videos](https://www.youtube.com/watch?v=3NgVlAscdcA&list=PLMPgoZdlPumc_llMSynz5BqT8dTwr5sZ2)
+- [w3schools](https://www.w3schools.com/)
+---
+## Testing
+See [Testing.md](/workspace/AudioGame/testing.md) for development
+
 
 ## Gameplay
-On start, two notes will play and you have 5 chances to pick from a possible 12 answers. 
-
+1. On game load, choose whether to listen to melodic or harmonic intervals.
+2. On start, press play and two notes will sound.
+3. Pick from the 12 possible answers below.
+4. If incorrect, the button goes red and you lose a point. Try again.
+5. If correct, the button goes green and you gain 5 points.
+6. The 'next' button will flash green until you have correctly guessed the final interval
+7. Score out of 100 pops up on screen with the prompt to play again.
 
 
 

@@ -13,8 +13,12 @@ let selectedInterval;
 var score = 0;
 var addScore = 5;
 
+
+
 //On Load Page Modal
-$(window).on('load', function() {
+$(window).on('load', async function() {
+    await initialiseSoundFiles();
+    await initialiseHarmonicSoundFiles();
     $('#onPageLoadModal').modal('show');
 
 
@@ -26,33 +30,37 @@ $(window).on('load', function() {
     var intervalType = intervalTypeSwitch.getElementsByClassName("intervalType");
 
     for (var i = 0; i < intervalType.length; i++) {
-        intervalType[i].addEventListener("click", async function() {
+        intervalType[i].addEventListener("click", function() {
             currentIntervalID = document.getElementsByClassName("active");
 
             currentIntervalID[0].className = currentIntervalID[0].className.replace(" active", "");
 
             this.className += " active";
 
-            return selectedInterval = await $("#intervalTypeSwitch .active").attr('id');
+            return selectedInterval = $("#intervalTypeSwitch .active").attr('id');
         });
         
     }
     
 });
-async function IsMelodic() {
-                await selectedInterval;
-                if (selectedInterval == 'melodic') {
-                    return true;
-                } else {
-                    return false;
-                }
-                
-            }
-            console.log(isMelodic);
+function IsMelodic() {
+    return selectedInterval == 'melodic';
+}
+           
 
 // On close start game modal
 function onStartGame() {
     score = 0;
+    console.log(selectedInterval);
+if (IsMelodic() == true) {
+    startGame.addEventListener("mousedown", playback);
+    playAgain.addEventListener("mousedown", replay);
+    next.addEventListener('mousedown', playback)
+} else {
+    startGame.addEventListener("mousedown", playbackHarmonic);
+    playAgain.addEventListener("mousedown", replayHarmonic);
+    next.addEventListener('mousedown', playbackHarmonic)
+}
     loadGame.addEventListener("mousedown", console.log(selectedInterval));
 }
 //Function to fetch audio files - Web Audio API
@@ -68,9 +76,8 @@ const fetchAudioFile = async (fileName) => {
 }
 // Fetching Audio Files from function to send to array in audiofiles.js!
 
+console.log("initialiseSound");
 
-initialiseSoundFiles();
-initialiseHarmonicSoundFiles();
 
 // Web audio API playback function with randomised version of allNotesArray
 
@@ -123,15 +130,10 @@ function changePlayButton() {
     document.getElementById(`startGame`).style.opacity = "0";
 }
 // Event listeners for mouse instructions for play and repeat
-if (IsMelodic == true) {
-    startGame.addEventListener("mousedown", playback);
-    playAgain.addEventListener("mousedown", replay);
-    next.addEventListener('mousedown', playback)
-} else {
-    startGame.addEventListener("mousedown", playbackHarmonic);
-    playAgain.addEventListener("mousedown", replayHarmonic);
-    next.addEventListener('mousedown', playbackHarmonic)
-}
+
+
+
+
 startGame.addEventListener("mousedown", changePlayButton);
 next.addEventListener('mousedown', revertNextCSS)
 
@@ -147,7 +149,7 @@ button.onclick = function() {
     }
 
 };
-// Initialise scores
+
 
 
 // Function to determine if the answer is right or wrong (note: the button IDs in index.html correspond to the correct audio file position in allNotesArray)
@@ -155,7 +157,7 @@ function play(guessIndex) {
 
     if (guessIndex !== randomNoteIndex) {
         score--;
-        document.getElementById(`button${guessIndex}`).style.backgroundColor = "#D91909";
+        document.getElementById(`button${guessIndex}`).style.backgroundColor = "var(--reddish)";
         setTimeout(function() {
             document.getElementById(`button${guessIndex}`).style.backgroundColor = ""
         }, 500);

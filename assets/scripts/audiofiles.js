@@ -169,4 +169,6 @@ allNotesArrayHarmonic = await Promise.all([randomHarmonicMinorSecond, randomHarm
         randomHarmonicMajorThird, randomHarmonicPerfectFourth, randomHarmonicTritone, randomHarmonicPerfectFifth, randomHarmonicMinorSixth,
         randomHarmonicMajorSixth, randomHarmonicMinorSeventh, randomHarmonicMajorSeventh, randomHarmonicOctave
     ]);
+    console.log("did it work");
+    console.log(allNotesArrayHarmonic);
 }
