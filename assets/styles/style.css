@@ -19,9 +19,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .loader.hidden {
-    animation: fadeOut 1s;
+    animation: fadeOut 0.5s;
     animation-fill-mode: forwards;
 }
 @keyframes fadeOut {

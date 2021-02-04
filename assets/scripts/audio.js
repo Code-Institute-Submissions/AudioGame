@@ -7,8 +7,8 @@ if (AudioContext) {
     var ctx = new AudioContext;
     
 } else {
-    alert("Sorry, but the Web Audio API is not supported by your browser. Please, consider upgrading to the latest version or downloading Google Chrome or Mozilla Firefox");
-}
+        "Load screen handles this"
+};
 
 let audio;
 let randomNoteIndex;
@@ -61,7 +61,7 @@ loadGame.addEventListener("mousedown", function() {
     loader.className += " hidden";
 }) 
 setTimeout(function() {
-            document.querySelector(".loader").innerHTML = "If you're still here, your browser might not be a musician<br/>May we suggest trying Chrome or Firefox!"
+            document.querySelector(".loader").innerHTML = "Check your connection or try reloading. <br/>>If that doesnt work, your browser might not be a musician<br/>May we suggest trying Chrome or Firefox!"
         }, 5000);
 
 // On close start game modal
@@ -218,6 +218,13 @@ function resetEventListener() {
         return playbackHarmonic
     }
 }
+function resetReplayListener() {
+    if (selectedInterval == 'melodic') {
+        return replay
+    } else {
+        return replayHarmonic
+    }
+}
        //reset to zero on new game
     var anotherGame = document.getElementById("playAnotherGame");
     anotherGame.onclick = function() {
@@ -225,6 +232,7 @@ function resetEventListener() {
         count = 1;
         startGame.removeEventListener('mousedown', resetEventListener());
         next.removeEventListener('mousedown', resetEventListener());
+        playAgain.removeEventListener('mousedown', resetReplayListener());
         document.getElementById(`next`).disabled = false;
         document.getElementById(`next`).style.backgroundColor = "";
         isMelodic = undefined;
