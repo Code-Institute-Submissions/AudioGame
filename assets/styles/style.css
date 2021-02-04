@@ -72,7 +72,8 @@ h1 {
     font-size: 30px;
 }
 .scoreArea h5,
-.scoreArea label {
+.scoreArea label, 
+#startGame.started, #startGame:active {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -88,7 +89,7 @@ h1 {
     height: 75px;
     width: 75px;
     margin-top: 10px;
-    padding: 10px 5px;
+    padding: 5px 5px;
     background-color: var(--navy);
     border-radius: 20px;
     box-shadow: 2px 2px 0px 0px var(--blackish);

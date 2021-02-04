@@ -1,13 +1,14 @@
 // Declare Variables
 var AudioContext = window.AudioContext // Default
-    || window.webkitAudioContext 
-    || false; 
+    ||
+    window.webkitAudioContext ||
+    false;
 
 if (AudioContext) {
     var ctx = new AudioContext;
-    
+
 } else {
-        "Load screen handles this"
+    "Load screen handles this";
 };
 
 let audio;
@@ -18,7 +19,6 @@ let allNotesArrayHarmonic;
 let randomNoteHarmonic;
 let correctAnswer;
 let currentIntervalID;
-let isMelodic;
 let selectedInterval;
 var score = 0;
 var addScore = 5;
@@ -27,13 +27,13 @@ var addScore = 5;
 
 //On Load Page Modal
 $(window).on('load', async function() {
-    await initialiseSoundFiles();
+    await initialiseSoundFiles(); //Initialise the sound files being fetched in audiofiles.js
     await initialiseHarmonicSoundFiles();
-    $('#onPageLoadModal').modal('show');
+    $('#onPageLoadModal').modal('show'); //Load modal when sound files are initialised
 
 
 
-    // Change Harmonic/Melodic function
+    // Change Harmonic/Melodic function in onPageLoadModal
 
     var intervalTypeSwitch = document.getElementById("intervalTypeSwitch");
 
@@ -49,34 +49,32 @@ $(window).on('load', async function() {
 
             return selectedInterval = $("#intervalTypeSwitch .active").attr('id');
         });
-        
+
     }
-    
+
 });
-/*function IsMelodic() {
-    return selectedInterval == 'melodic';
-} */
+
 loadGame.addEventListener("mousedown", function() {
     const loader = document.querySelector(".loader");
     loader.className += " hidden";
-}) 
+})
 setTimeout(function() {
-            document.querySelector(".loader").innerHTML = "Check your connection or try reloading. <br/>>If that doesnt work, your browser might not be a musician<br/>May we suggest trying Chrome or Firefox!"
-        }, 5000);
+    document.querySelector(".loader").innerHTML = "Check your connection or try reloading. <br/>If that doesnt work, your browser might not be a musician<br/>May we suggest trying Chrome or Firefox!"
+}, 5000);
 
 // On close start game modal
 function onStartGame() {
     score = 0;
     console.log(selectedInterval);
-if ($("#melodic").hasClass('active')) {
-    startGame.addEventListener("mousedown", playback);
-    playAgain.addEventListener("mousedown", replay);
-    next.addEventListener('mousedown', playback)
-} else {
-    startGame.addEventListener("mousedown", playbackHarmonic);
-    playAgain.addEventListener("mousedown", replayHarmonic);
-    next.addEventListener('mousedown', playbackHarmonic)
-}
+    if ($("#melodic").hasClass('active')) {
+        startGame.addEventListener("mousedown", playback);
+        playAgain.addEventListener("mousedown", replay);
+        next.addEventListener('mousedown', playback)
+    } else {
+        startGame.addEventListener("mousedown", playbackHarmonic);
+        playAgain.addEventListener("mousedown", replayHarmonic);
+        next.addEventListener('mousedown', playbackHarmonic)
+    }
     loadGame.addEventListener("mousedown", console.log(selectedInterval));
 }
 //Function to fetch audio files - Web Audio API
@@ -143,7 +141,10 @@ function revertNextCSS() {
 }
 
 function changePlayButton() {
-    document.getElementById(`startGame`).style.opacity = "0";
+    document.getElementById(`startGame`).disabled = true;
+    document.getElementById(`startGame`).className += " started";
+    document.getElementById(`startGame`).style.backgroundColor = "var(--navy)";
+    document.getElementById(`startGame`).innerHTML = `Q:<br/>${count}/20`;
 }
 // Event listeners for mouse instructions for play and repeat
 
@@ -160,6 +161,7 @@ var button = document.getElementById("next"),
     count = 1;
 button.onclick = function() {
     count += 1;
+    document.getElementById(`startGame`).innerHTML = `Q:<br/>${count}/20`;
     if (count === 20) {
         document.getElementById(`next`).style.backgroundColor = "var(--offWhite";
         document.getElementById(`next`).disabled = true;
@@ -209,23 +211,24 @@ function play(guessIndex) {
     playerScore.innerHTML = score;
 
 
- 
 
-function resetEventListener() {
-    if (selectedInterval == 'melodic') {
-        return playback
-    } else {
-        return playbackHarmonic
+
+    function resetEventListener() {
+        if (selectedInterval == 'melodic') {
+            return playback
+        } else {
+            return playbackHarmonic
+        }
     }
-}
-function resetReplayListener() {
-    if (selectedInterval == 'melodic') {
-        return replay
-    } else {
-        return replayHarmonic
+
+    function resetReplayListener() {
+        if (selectedInterval == 'melodic') {
+            return replay
+        } else {
+            return replayHarmonic
+        }
     }
-}
-       //reset to zero on new game
+    //reset to zero on new game
     var anotherGame = document.getElementById("playAnotherGame");
     anotherGame.onclick = function() {
         score = 0;
@@ -235,7 +238,6 @@ function resetReplayListener() {
         playAgain.removeEventListener('mousedown', resetReplayListener());
         document.getElementById(`next`).disabled = false;
         document.getElementById(`next`).style.backgroundColor = "";
-        isMelodic = undefined;
         playerScore.innerHTML = score;
         document.getElementById(`startGame`).style.opacity = "1";
         $('#onPageLoadModal').modal('show');
