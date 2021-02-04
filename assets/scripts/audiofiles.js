@@ -1,7 +1,14 @@
 /*jshint esversion: 6 */
 /*jshint esversion: 8 */
-let allNotesArray;
-let allNotesArrayHarmonic;
+const fetchAudioFile = async (fileName) => {
+    if (!fileName) throw new Error("File Name is required");
+
+    return fetch(fileName).then(async (data) => {
+        const arrayBuffer = await data.arrayBuffer();
+        const decodedAudio = await ctx.decodeAudioData(arrayBuffer);
+        return decodedAudio;
+    });
+};
 
 const initialiseSoundFiles = async function() {
     let minorSecondPromise = fetchAudioFile("assets/audioclips/minorsecond.wav");

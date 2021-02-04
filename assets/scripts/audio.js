@@ -1,6 +1,5 @@
 /*jshint esversion: 6 */
 /*jshint esversion: 8 */
-
 // Declare Variables
 var AudioContext =
     window.AudioContext || // Default
@@ -12,9 +11,6 @@ if (AudioContext) {
 } else {
     alert("Browser does not support API");
 }
-let startGame;
-let loadGame;
-let playAgain;
 let randomNoteIndex;
 let lastRandomNote;
 let lastRandomNoteHarmonic;
@@ -25,8 +21,7 @@ let currentIntervalID;
 let selectedInterval;
 var score = 0;
 var addScore = 5;
-let $;
-let next;
+
 
 //On Load Page Modal
 $(window).on("load", async function() {
@@ -80,15 +75,7 @@ function onStartGame() {
 }
 //Function to fetch audio files - Web Audio API
 // Fetching Audio Files from function to send to array in audiofiles.js!
-const fetchAudioFile = async (fileName) => {
-    if (!fileName) throw new Error("File Name is required");
 
-    return fetch(fileName).then(async (data) => {
-        const arrayBuffer = await data.arrayBuffer();
-        const decodedAudio = await ctx.decodeAudioData(arrayBuffer);
-        return decodedAudio;
-    });
-};
 
 
 console.log("initialiseSound");
