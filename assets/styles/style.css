@@ -232,13 +232,10 @@ footer {
     }
 }
 
-@media only screen and (min-width: 768px) {
-    .topOfPage {
-        padding-top: 40px;
-        height: 350px;
-    }
+@media only screen and (min-width: 1200px) {
+    
     h1 {
-        padding: 15px;
+        padding: 20px;
         font-size: 40px;
     }
     .scoreArea {
