@@ -49,3 +49,8 @@ The game at several stages of development was sent to two people to try. One had
 
 
 loader https://www.youtube.com/watch?v=xuA83OYTE7I
+
+# Current Bugs
+
+Safari/IE 
+On new game, both types of interval play

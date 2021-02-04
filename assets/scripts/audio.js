@@ -53,19 +53,22 @@ $(window).on('load', async function() {
     }
     
 });
-function IsMelodic() {
+/*function IsMelodic() {
     return selectedInterval == 'melodic';
-}
+} */
 loadGame.addEventListener("mousedown", function() {
     const loader = document.querySelector(".loader");
     loader.className += " hidden";
 }) 
+setTimeout(function() {
+            document.querySelector(".loader").innerHTML = "If you're still here, your browser might not be a musician<br/>May we suggest trying Chrome or Firefox!"
+        }, 5000);
 
 // On close start game modal
 function onStartGame() {
     score = 0;
     console.log(selectedInterval);
-if (IsMelodic() == true) {
+if ($("#melodic").hasClass('active')) {
     startGame.addEventListener("mousedown", playback);
     playAgain.addEventListener("mousedown", replay);
     next.addEventListener('mousedown', playback)
@@ -206,12 +209,22 @@ function play(guessIndex) {
     playerScore.innerHTML = score;
 
 
-    //reset to zero on new game
+ 
 
+function resetEventListener() {
+    if (selectedInterval == 'melodic') {
+        return playback
+    } else {
+        return playbackHarmonic
+    }
+}
+       //reset to zero on new game
     var anotherGame = document.getElementById("playAnotherGame");
     anotherGame.onclick = function() {
         score = 0;
         count = 1;
+        startGame.removeEventListener('mousedown', resetEventListener());
+        next.removeEventListener('mousedown', resetEventListener());
         document.getElementById(`next`).disabled = false;
         document.getElementById(`next`).style.backgroundColor = "";
         isMelodic = undefined;
