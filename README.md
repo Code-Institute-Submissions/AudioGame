@@ -94,30 +94,36 @@ See [Testing.md](/workspace/AudioGame/testing.md) for development
 
 ## Deployment
 
-This project was developed in (((###############Gitpod))), committed to git and pushed to GitHub.
+This project was developed in [Gitpod](https://github.com/), committed to git and pushed to GitHub.
 
 To deploy this page to GitHub Pages from its GitHub repository, the following steps were taken:
 
 Go to github and log into your account.
-Select (((######################)))project repository
+Select [repository](https://github.com/Shinners888/AudioGame)
 Above green Gitpod button, select settings, and scroll down to github pages section
 In source: select master branch and root folder.
 Hit save. This may then require patient waiting for the site to be deployed!
 Scroll back down to the GitHub Pages section to retrieve the link to the deployed website. If it is not yet ready, make some tea and wait.
-Cloning the repository
 
-## Cloning in Gitpod
+## Cloning the repository
+
+### Cloning in Gitpod
 
 log into your Github account
-go to ############################this repository
+go to [repository](https://github.com/Shinners888/AudioGame)
 click on the green gitpod button (Ensure you have a gitpod account and the gitpod browser extension. Recommended to do this in chrome)
 this will now open a new gitpod workspace using the code in github, for you to work on
 
-## Cloning in other IDEs
+### Cloning in other IDEs
 
-go to ##############################this repository
+go to this [repository](https://github.com/Shinners888/AudioGame)
 beside the green gitpod button, click the 'code' dropdown
 select the HTTPS option and copy the link to your clipboard
 go to your IDE and open the terminal
 type: 'git clone' followed by pasting the copied link, and press enter
 your clone should be created. for troubleshooting, see: ##############################Github docs
+
+
+## Acknowledgements
+
+I would like to thank my Mentor, Nishant Kumar for his invaluable advice, especially regading the simplification of functions. I would also like to thank my game testers, Declan and Eileen, for their feedback and recommendations for the UX.

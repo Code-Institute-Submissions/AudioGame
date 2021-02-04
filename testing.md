@@ -64,6 +64,8 @@ The game at several stages of development was sent to two people to try. One had
 -  Add Something to indicate how much of the game is left
 - -  Added progress counter in place of start button. As start button is now disabled however, opacity had to be assigned to '1'.
 
+-  On some large screens, the score area/ play buttons dip below the piano photo
+- -  The photo was set to 33% viewheight. This was changed to 260px to retain as much of the answer block within the screen as possible, and still see the play buttons/score area
 ## Bugs and potential future fixes/upgrades
 
 1. More than once, the randomised sound file is the exact same as the previous sound file. 
