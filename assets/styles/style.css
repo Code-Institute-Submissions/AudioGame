@@ -184,7 +184,7 @@ footer {
 @media only screen and (min-width: 768px) {
     .topOfPage {
         padding-top: 40px;
-        height: 33vh;
+        height: 300px;
     }
     h1 {
         padding: 20px;
@@ -229,5 +229,21 @@ footer {
     }
     button i {
         font-size: 35px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .topOfPage {
+        padding-top: 40px;
+        height: 350px;
+    }
+    h1 {
+        padding: 15px;
+        font-size: 40px;
+    }
+    .scoreArea {
+        height: 75px;
+        padding: 15px;
+        border-radius: 20px;
     }
 }

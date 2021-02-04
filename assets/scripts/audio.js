@@ -137,11 +137,12 @@ function replayHarmonic() {
 }
 
 function revertNextCSS() {
-    document.getElementById(`next`).style.backgroundColor = ""
+    document.getElementById(`next`).style.backgroundColor = "";
 }
 
 function changePlayButton() {
     document.getElementById(`startGame`).disabled = true;
+    document.getElementById(`startGame`).style.opacity = "1";
     document.getElementById(`startGame`).className += " started";
     document.getElementById(`startGame`).style.backgroundColor = "var(--navy)";
     document.getElementById(`startGame`).innerHTML = `Q:<br/>${count}/20`;
