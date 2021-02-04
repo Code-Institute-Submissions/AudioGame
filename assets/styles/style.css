@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap");
 /*font-family: 'Josefin Sans', sans-serif; */
 :root {
-    --greenish: #22B114;
+    --greenish: #22b114;
     --reddish: #f05454;
     --blackish: #222831;
     --navy: #30475e;
@@ -82,8 +82,9 @@ h1 {
     background-color: var(--greenish);
 }
 .scoreArea h5,
-.scoreArea label, 
-#startGame.started, #startGame:active {
+.scoreArea label,
+#startGame.started,
+#startGame:active {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -160,34 +161,40 @@ footer {
     border-radius: 20px;
     background-color: var(--offWhite);
 }
-.onLoadModal, .endGameModal {
+.onLoadModal,
+.endGameModal {
     background-color: var(--navy);
     display: block;
 }
-.onLoadModal h4, .onLoadModal h5, 
-.endGameModal h4, .endGameModal h5, .intervalType, #playAnotherGame, #loadGame {
+.onLoadModal h4,
+.onLoadModal h5,
+.endGameModal h4,
+.endGameModal h5,
+.intervalType,
+#playAnotherGame,
+#loadGame {
     font-family: "Josefin Sans", sans-serif;
     color: var(--offWhite);
 }
 .intervalType {
     background-color: var(--navy);
 }
-.intervalType, #playAnotherGame, #loadGame {
+.intervalType,
+#playAnotherGame,
+#loadGame {
     text-decoration: underline;
     font-size: 20px;
 }
-.intervalType.active, .intervalType:active  {
-  color: var(--navy);
-  background-color: var(--offWhite);
-  border-radius: 5px;
+.intervalType.active,
+.intervalType:active {
+    color: var(--navy);
+    background-color: var(--offWhite);
+    border-radius: 5px;
 }
-
-
-
 
 /*Adjustments for different screen sizes*/
 
-@media only screen and (min-width: 450px){
+@media only screen and (min-width: 450px) {
     .answersTopRow button,
     .answersMiddleRow button,
     .answersBottomRow button {
@@ -219,13 +226,13 @@ footer {
         padding: 10px;
     }
     .sectionHeading {
-    padding-top: 20px;
-    text-align: center;
-    color: var(--navy);
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-}
+        padding-top: 20px;
+        text-align: center;
+        color: var(--navy);
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+    }
     .blockOfAnswers {
         padding-top: 10px;
     }
