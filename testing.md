@@ -97,7 +97,7 @@ Feedback and resolutions included:
 ## Bugs and potential future upgrades
 
 1. Web Audio API audioContext() not currently supported in IE and having issues in Safari. Before submission, I sent the game to a few extra people to test. An issue arose with some, but not all Apple devices, even in Chrome or Firefox. The sound files wil not initialise, therefore the game cannot load. The people tried on different devices and were able to play the game. I am working to discover what the common denominator is with these devices.
-
+ - Attempting a patch by user [cwilso](https://github.com/cwilso/AudioContext-MonkeyPatch/) for the browser incompatibility issue with the Web Audio API
 2. More than once, the randomised sound file is the exact same as the previous sound file. 
 
 3. Sound files are larger than synthesized sound. This causes a loading issue. A future version of the game where notes are 

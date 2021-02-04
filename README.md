@@ -56,7 +56,8 @@ This project was created using:
   - Note: bootstrap classes are formatted with hyphens separating words, whereas my own classes are camelCase
 - Font Awesome 
 - Logic Pro 
-- [Unsplash](https://unsplash.com/)
+- [Unsplash](https://unsplash.com/) 
+ 
 
 Resources:
 
@@ -68,6 +69,14 @@ Resources:
 - [w3schools](https://www.w3schools.com/)
 - [AjaxLoad](http://www.ajaxload.info/)
 - [dcode](https://www.youtube.com/watch?v=xuA83OYTE7I)
+- [cwilso](https://github.com/cwilso/AudioContext-MonkeyPatch/)
+
+---
+
+Credits: 
+
+Piano Image:
+[Johannes Plenio](https://unsplash.com/photos/RWytwNueNng) from Unsplash
 
 ---
 ## Testing

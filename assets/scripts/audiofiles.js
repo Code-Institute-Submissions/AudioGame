@@ -1,3 +1,8 @@
+/*jshint esversion: 6 */
+/*jshint esversion: 8 */
+let allNotesArray;
+let allNotesArrayHarmonic;
+
 const initialiseSoundFiles = async function() {
     let minorSecondPromise = fetchAudioFile("assets/audioclips/minorsecond.wav");
     let majorSecondPromise = fetchAudioFile("assets/audioclips/majorsecond.wav");
@@ -41,40 +46,40 @@ const initialiseSoundFiles = async function() {
 
     // Three random versions of each interval can potentially be sent to the awaiting array below. 
 
-    let melodicMinorSecond = [minorSecondPromise, minorSecondPromise2, minorSecondPromise3]
+    let melodicMinorSecond = [minorSecondPromise, minorSecondPromise2, minorSecondPromise3];
     let randomMelodicMinorSecond = melodicMinorSecond[Math.floor(Math.random() * 3)];
 
-    let melodicMajorSecond = [majorSecondPromise, majorSecondPromise2, majorSecondPromise3]
+    let melodicMajorSecond = [majorSecondPromise, majorSecondPromise2, majorSecondPromise3];
     let randomMelodicMajorSecond = melodicMajorSecond[Math.floor(Math.random() * 3)];
 
-    let melodicMinorThird = [minorThirdPromise, minorThirdPromise2, minorThirdPromise3]
+    let melodicMinorThird = [minorThirdPromise, minorThirdPromise2, minorThirdPromise3];
     let randomMelodicMinorThird = melodicMinorThird[Math.floor(Math.random() * 3)];
 
-    let melodicMajorThird = [majorThirdPromise, majorThirdPromise2, majorThirdPromise3]
+    let melodicMajorThird = [majorThirdPromise, majorThirdPromise2, majorThirdPromise3];
     let randomMelodicMajorThird = melodicMajorThird[Math.floor(Math.random() * 3)];
 
-    let melodicPerfectFourth = [perfectFourthPromise, perfectFourthPromise2, perfectFourthPromise3]
+    let melodicPerfectFourth = [perfectFourthPromise, perfectFourthPromise2, perfectFourthPromise3];
     let randomMelodicPerfectFourth = melodicPerfectFourth[Math.floor(Math.random() * 3)];
 
-    let melodicTritone = [tritonePromise, tritonePromise2, tritonePromise3]
+    let melodicTritone = [tritonePromise, tritonePromise2, tritonePromise3];
     let randomMelodicTritone = melodicTritone[Math.floor(Math.random() * 3)];
 
-    let melodicPerfectFifth = [perfectFifthPromise, perfectFifthPromise2, perfectFifthPromise3]
+    let melodicPerfectFifth = [perfectFifthPromise, perfectFifthPromise2, perfectFifthPromise3];
     let randomMelodicPerfectFifth = melodicPerfectFifth[Math.floor(Math.random() * 3)];
 
-    let melodicMinorSixth = [minorSixthPromise, minorSixthPromise2, minorSixthPromise3]
+    let melodicMinorSixth = [minorSixthPromise, minorSixthPromise2, minorSixthPromise3];
     let randomMelodicMinorSixth = melodicMinorSixth[Math.floor(Math.random() * 3)];
 
-    let melodicMajorSixth = [majorSixthPromise, majorSixthPromise2, majorSixthPromise3]
+    let melodicMajorSixth = [majorSixthPromise, majorSixthPromise2, majorSixthPromise3];
     let randomMelodicMajorSixth = melodicMajorSixth[Math.floor(Math.random() * 3)];
 
-    let melodicMinorSeventh = [minorSeventhPromise, minorSeventhPromise2, minorSeventhPromise3]
+    let melodicMinorSeventh = [minorSeventhPromise, minorSeventhPromise2, minorSeventhPromise3];
     let randomMelodicMinorSeventh = melodicMinorSeventh[Math.floor(Math.random() * 3)];
 
-    let melodicMajorSeventh = [majorSeventhPromise, majorSeventhPromise2, majorSeventhPromise3]
+    let melodicMajorSeventh = [majorSeventhPromise, majorSeventhPromise2, majorSeventhPromise3];
     let randomMelodicMajorSeventh = melodicMajorSeventh[Math.floor(Math.random() * 3)];
 
-    let melodicOctave = [octavePromise, octavePromise2, octavePromise3]
+    let melodicOctave = [octavePromise, octavePromise2, octavePromise3];
     let randomMelodicOctave = melodicOctave[Math.floor(Math.random() * 3)];
 
     /* Any melodic interval file can be randomly accessed from this array. 
@@ -129,46 +134,45 @@ const initialiseHarmonicSoundFiles = async function() {
 
     // Three random versions of each interval can potentially be sent to the awaiting array below. 
 
-    let harmonicMinorSecond = [minorSecondHarPromise, minorSecondHarPromise2, minorSecondHarPromise3]
+    let harmonicMinorSecond = [minorSecondHarPromise, minorSecondHarPromise2, minorSecondHarPromise3];
     let randomHarmonicMinorSecond = harmonicMinorSecond[Math.floor(Math.random() * 3)];
 
-    let harmonicMajorSecond = [majorSecondHarPromise, majorSecondHarPromise2, majorSecondHarPromise3]
+    let harmonicMajorSecond = [majorSecondHarPromise, majorSecondHarPromise2, majorSecondHarPromise3];
     let randomHarmonicMajorSecond = harmonicMajorSecond[Math.floor(Math.random() * 3)];
 
-    let harmonicMinorThird = [minorThirdHarPromise, minorThirdHarPromise2, minorThirdHarPromise3]
+    let harmonicMinorThird = [minorThirdHarPromise, minorThirdHarPromise2, minorThirdHarPromise3];
     let randomHarmonicMinorThird = harmonicMinorThird[Math.floor(Math.random() * 3)];
 
-    let harmonicMajorThird = [majorThirdHarPromise, majorThirdHarPromise2, majorThirdHarPromise3]
+    let harmonicMajorThird = [majorThirdHarPromise, majorThirdHarPromise2, majorThirdHarPromise3];
     let randomHarmonicMajorThird = harmonicMajorThird[Math.floor(Math.random() * 3)];
 
-    let harmonicPerfectFourth = [perfectFourthHarPromise, perfectFourthHarPromise2, perfectFourthHarPromise3]
+    let harmonicPerfectFourth = [perfectFourthHarPromise, perfectFourthHarPromise2, perfectFourthHarPromise3];
     let randomHarmonicPerfectFourth = harmonicPerfectFourth[Math.floor(Math.random() * 3)];
 
-    let harmonicTritone = [tritoneHarPromise, tritoneHarPromise2, tritoneHarPromise3]
+    let harmonicTritone = [tritoneHarPromise, tritoneHarPromise2, tritoneHarPromise3];
     let randomHarmonicTritone = harmonicTritone[Math.floor(Math.random() * 3)];
 
-    let harmonicPerfectFifth = [perfectFifthHarPromise, perfectFifthHarPromise2, perfectFifthHarPromise3]
+    let harmonicPerfectFifth = [perfectFifthHarPromise, perfectFifthHarPromise2, perfectFifthHarPromise3];
     let randomHarmonicPerfectFifth = harmonicPerfectFifth[Math.floor(Math.random() * 3)];
 
-    let harmonicMinorSixth = [minorSixthHarPromise, minorSixthHarPromise2, minorSixthHarPromise3]
+    let harmonicMinorSixth = [minorSixthHarPromise, minorSixthHarPromise2, minorSixthHarPromise3];
     let randomHarmonicMinorSixth = harmonicMinorSixth[Math.floor(Math.random() * 3)];
 
-    let harmonicMajorSixth = [majorSixthHarPromise, majorSixthHarPromise2, majorSixthHarPromise3]
+    let harmonicMajorSixth = [majorSixthHarPromise, majorSixthHarPromise2, majorSixthHarPromise3];
     let randomHarmonicMajorSixth = harmonicMajorSixth[Math.floor(Math.random() * 3)];
 
-    let harmonicMinorSeventh = [minorSeventhHarPromise, minorSeventhHarPromise2, minorSeventhHarPromise3]
+    let harmonicMinorSeventh = [minorSeventhHarPromise, minorSeventhHarPromise2, minorSeventhHarPromise3];
     let randomHarmonicMinorSeventh = harmonicMinorSeventh[Math.floor(Math.random() * 3)];
 
-    let harmonicMajorSeventh = [majorSeventhHarPromise, majorSeventhHarPromise2, majorSeventhHarPromise3]
+    let harmonicMajorSeventh = [majorSeventhHarPromise, majorSeventhHarPromise2, majorSeventhHarPromise3];
     let randomHarmonicMajorSeventh = harmonicMajorSeventh[Math.floor(Math.random() * 3)];
 
-    let harmonicOctave = [octaveHarPromise, octaveHarPromise2, octaveHarPromise3]
+    let harmonicOctave = [octaveHarPromise, octaveHarPromise2, octaveHarPromise3];
     let randomHarmonicOctave = harmonicOctave[Math.floor(Math.random() * 3)];
 
 allNotesArrayHarmonic = await Promise.all([randomHarmonicMinorSecond, randomHarmonicMajorSecond, randomHarmonicMinorThird,
         randomHarmonicMajorThird, randomHarmonicPerfectFourth, randomHarmonicTritone, randomHarmonicPerfectFifth, randomHarmonicMinorSixth,
         randomHarmonicMajorSixth, randomHarmonicMinorSeventh, randomHarmonicMajorSeventh, randomHarmonicOctave
     ]);
-    console.log("did it work");
-    console.log(allNotesArrayHarmonic);
+    
 }

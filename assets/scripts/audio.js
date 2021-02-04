@@ -1,3 +1,6 @@
+/*jshint esversion: 6 */
+/*jshint esversion: 8 */
+
 // Declare Variables
 var AudioContext =
     window.AudioContext || // Default
@@ -9,17 +12,21 @@ if (AudioContext) {
 } else {
     alert("Browser does not support API");
 }
-
+let startGame;
+let loadGame;
+let playAgain;
 let randomNoteIndex;
 let lastRandomNote;
+let lastRandomNoteHarmonic;
 let allNotesArray;
 let allNotesArrayHarmonic;
-let randomNoteHarmonic;
 let correctAnswer;
 let currentIntervalID;
 let selectedInterval;
 var score = 0;
 var addScore = 5;
+let $;
+let next;
 
 //On Load Page Modal
 $(window).on("load", async function() {
