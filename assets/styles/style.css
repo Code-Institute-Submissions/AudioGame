@@ -90,10 +90,11 @@ h1 {
     font-size: 16px;
     text-align: center;
     color: var(--offWhite);
+    margin-bottom: 0;
 }
 .scoreArea {
     background-color: var(--navy);
-    padding-top: 15px;
+    padding: 15px;
     border-radius: 20px;
 }
 .playAgain {
@@ -123,6 +124,7 @@ h1 {
 .answersTopRow button,
 .answersMiddleRow button,
 .answersBottomRow button {
+    display: block;
     height: 100px;
     max-width: 80px;
     margin: 5px;
@@ -193,7 +195,32 @@ footer {
 }
 
 /*Adjustments for different screen sizes*/
-
+@media only screen and (max-width: 450px) {
+    h1 {
+    font-size: 20px;
+    }
+    .playAgain {
+    height: 75px;
+    min-width: 40px;
+    }
+    .scoreArea h5,
+    .scoreArea label,
+    #startGame.started,
+    #startGame:active {
+    padding: 2px 2px;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 0;
+    }
+    .answersTopRow button,
+    .answersMiddleRow button,
+    .answersBottomRow button {
+        max-width: 80px;
+    } 
+    .blockOfAnswers button {
+        font-size: 12px;;
+    }
+}
 @media only screen and (min-width: 450px) {
     .answersTopRow button,
     .answersMiddleRow button,
